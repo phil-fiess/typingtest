@@ -1,0 +1,136 @@
+#typingtest-admin-wrapper {
+  width: 100%;
+}
+#typingtest-admin-wrapper #typingtest-admin-header {
+  text-align: center;
+  font-size: 32px;
+  margin: 10px auto;
+  width: auto;
+  padding: 20px 0px;
+}
+#typingtest-admin-wrapper #typingtest-admin-form-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px auto;
+  width: auto;
+}
+#typingtest-admin-wrapper form {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+#typingtest-admin-wrapper form select {
+  margin: auto;
+  margin-bottom: 15px;
+}
+#typingtest-admin-wrapper form .select-label {
+  margin: auto;
+}
+#typingtest-admin-wrapper form textarea {
+  margin: 20px 0px;
+}
+#typingtest-admin-wrapper form label {
+  font-size: 18px;
+}
+#typingtest-admin-wrapper form button {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 18px;
+}
+#typingtest-admin-wrapper form button:hover {
+  background-color: lightgray;
+}
+
+/**END ADMIN SECTION **/
+/**TYPING TEST TOOL STYLING **/
+.typingtest-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typingtest-heading {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: black;
+}
+
+.typingtest-header {
+  display: flex;
+  align-items: center;
+}
+
+.timer, .errors, .accuracy,
+.wpm {
+  background-color: #ccda46;
+  height: 100px;
+  width: 120px;
+  margin: 8px;
+  padding: 12px;
+  border-radius: 20%;
+  box-shadow: black 5px 8px 5px;
+}
+
+.wpm {
+  display: none;
+}
+
+.header-text {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.current-time, .current-errors,
+.current-accuracy,
+.current-wpm {
+  font-size: 2.75rem;
+  width: 100px;
+}
+
+.lesson-content {
+  background-color: #ccda46;
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 25px;
+  box-shadow: black 5px 8px 5px;
+}
+
+.input-area {
+  background-color: #f5f5c6;
+  height: 80px;
+  width: 90%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 15px;
+  padding: 20px;
+  border: 0px;
+  box-shadow: black 5px 8px 5px;
+}
+
+.restart-button {
+  display: none;
+  background-color: #326765;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 0px;
+  box-shadow: black 5px 8px 5px;
+}
+
+.incorrect-char {
+  color: red;
+  text-decoration: underline;
+}
+
+.correct-char {
+  color: darkgreen;
+}
+
+#user-profile-container {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
