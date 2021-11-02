@@ -1,18 +1,33 @@
 @use '../colours.scss' as colours;
 
-/**TYPING TEST TOOL STYLING **/
 
-// body {
-//     background-color: #fe9801;
-//     color: black;
-//     text-align: center;
-//   }
+
+
+
+
     
 .typingtest-container {
+    font-family: 'Ruda', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
+
+.lesson-selector {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.buttons-wrapper {
+    margin: 1.5rem;
+}
+
+.competency-selector-label, .level-selector-label {
+    margin-top: 0.5rem;
+}
+
+
     
   .typingtest-heading {
     margin-bottom: 20px;
@@ -24,10 +39,12 @@
     display: flex;
     align-items: center;
   }
+
+
     
-  .timer, .errors, .accuracy,
+  .timer, .errors, .accuracy, 
   .wpm {
-    background-color: #ccda46;
+    background-color: rgba(colours.$turquoiseblue, 80%);
     height: 100px;
     width: 120px;
     margin: 8px;
@@ -46,23 +63,22 @@
     font-weight: 600;
   }
     
-  .current-time, .current-errors,
-  .current-accuracy,
+  .current-time, .current-errors, .current-accuracy,
   .current-wpm {
     font-size: 2.75rem;
     width: 100px;
   }
     
   .lesson-content {
-    background-color: #ccda46;
+    background-color: rgba(colours.$turquoiseblue, 50%);
     font-size: 1.5rem;
-    margin: 10px;
-    padding: 25px;
+    margin: 1.5rem;
+    padding: 1.5rem;
     box-shadow: black 5px 8px 5px;
   }
     
   .input-area {
-    background-color: #f5f5c6;
+    background-color: rgba(colours.$turquoiseblue, 20%);
     height: 80px;
     width: 90%;
     font-size: 1.5rem;
@@ -83,12 +99,14 @@
   }
     
   .incorrect-char {
-    color: red;
+    color: colours.$darkred;
+    // font-weight: bold;
     text-decoration: underline;
   }
     
   .correct-char {
-    color: darkgreen;
+    color: colours.$turquoiseblue;
+    // font-weight: bold;
   }
 
   #user-profile-container {

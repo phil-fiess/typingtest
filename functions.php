@@ -114,10 +114,12 @@ function typingtest_render_tool_shortcode() {
                     Select a lesson and hit start to begin the exercise. 
                 </div>
                 <textarea class="input-area" placeholder="start typing here..."></textarea>
-                <button class="start-button">Start</button>    
-                <button class="restart-button">Restart</button>
-                <button class="profile-button">User Profile</button>
-                <button class="help-button">Help</button>
+                <div class="buttons-wrapper">
+                    <button class="button start-button">Start</button>    
+                    <button class="button restart-button">Restart</button>
+                    <button class="button profile-button">User Profile</button>
+                    <button class="button help-button">Help</button>
+                </div>
             </div>
             <div id="user-profile-container">
                 <div id="user-profile-basic-info">

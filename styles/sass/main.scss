@@ -3,9 +3,11 @@
 @use 'components/typingtest.scss';
 
 
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap');
 // Ruda font used under OFL (Open Font License) licensing
 // See License terms: https://fonts.google.com/specimen/Ruda#license
-@font-face {
-  font-family: "Ruda";
-  src: url('../../fonts/Ruda/Ruda-VariableFont_wght.ttf') format('truetype');
-}
+
+// @font-face {
+//   font-family: "Ruda";
+//   src: url('../../fonts/Ruda/Ruda-VariableFont_wght.ttf') format('truetype');
+// }
