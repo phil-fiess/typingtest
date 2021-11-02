@@ -1,0 +1,49 @@
+#typingtest-admin-wrapper {
+  width: 100%;
+}
+#typingtest-admin-wrapper #typingtest-admin-header {
+  text-align: center;
+  font-size: 32px;
+  margin: 10px auto;
+  width: auto;
+  padding: 20px 0px;
+}
+#typingtest-admin-wrapper #typingtest-admin-form-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px auto;
+  width: auto;
+}
+#typingtest-admin-wrapper form {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+}
+#typingtest-admin-wrapper form select {
+  margin: auto;
+  margin-bottom: 15px;
+}
+#typingtest-admin-wrapper form .select-label {
+  margin: auto;
+}
+#typingtest-admin-wrapper form textarea {
+  margin: 20px 0px;
+}
+#typingtest-admin-wrapper form label {
+  font-size: 18px;
+}
+#typingtest-admin-wrapper form button {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+  font-size: 18px;
+}
+#typingtest-admin-wrapper form button:hover {
+  background-color: lightgray;
+}
+
+/**END ADMIN SECTION **/
+
+/*# sourceMappingURL=admin.css.map */

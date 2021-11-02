@@ -1,0 +1,53 @@
+// admin section styling
+#typingtest-admin-wrapper {
+    width: 100%;
+
+    #typingtest-admin-header {
+        text-align: center;
+        font-size: 32px;
+        margin: 10px auto;
+        width: auto;
+        padding: 20px 0px;
+    }
+    #typingtest-admin-form-title {
+        text-align: center;
+        font-size: 28px;
+        margin: 20px auto;
+        width: auto;
+    }
+
+    form {
+        width: 50%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        select {
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        .select-label {
+            margin: auto;
+        }
+        textarea {
+            margin: 20px 0px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        button {
+            width: 50%;
+            height: auto; 
+            margin: auto;
+            border-radius: 5px;
+            font-size: 18px;
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+
+    }
+}
+
+/**END ADMIN SECTION **/
