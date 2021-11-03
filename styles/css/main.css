@@ -81,7 +81,8 @@
   margin: 0;
 }
 
-textarea.input-area {
+.input-area {
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -90,14 +91,13 @@ textarea.input-area {
   border: none;
   width: inherit;
   height: inherit;
-  -webkit-text-fill-color: transparent;
-  color: #000000;
 }
 
-div.typingtest-container > div.lesson-wrapper > textarea.input-area {
+div.typingtest-container > div.lesson-wrapper > .input-area {
   padding: 1.5rem;
   margin: 0;
   border: 0;
+  color: transparent;
 }
 
 .typingtest-heading {
@@ -142,10 +142,6 @@ div.typingtest-container > div.lesson-wrapper > textarea.input-area {
   background-color: rgba(2, 159, 178, 0.5);
   font-size: 1.5rem;
   box-shadow: black 5px 8px 5px;
-}
-
-.input-area {
-  background-color: rgba(2, 159, 178, 0.2);
 }
 
 .restart-button {

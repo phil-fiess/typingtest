@@ -111,10 +111,10 @@ function typingtest_render_tool_shortcode() {
                     </select>
                 </div>
                 <div class="lesson-wrapper">
-                <div class="lesson-content">
+                <div class="lesson-content" spellcheck="false">
                     Select a section and difficulty level, then hit start to begin the exercise.
                 </div>
-                <textarea class="input-area"></textarea>
+                <textarea class="input-area" spellcheck="false"></textarea>
                 </div>
                 <div class="buttons-wrapper">
                     <button class="button start-button">Start</button>    
