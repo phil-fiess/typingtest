@@ -62,24 +62,6 @@ function typingtest_render_tool_shortcode() {
                 <div class="typingtest-heading">
                     CPA Typing Speed Tester
                 </div>
-                <div class="typingtest-header">
-                    <div class="wpm">
-                        <div class="header-text">WPM</div>
-                        <div class="current-wpm">100</div>
-                    </div>
-                    <div class="errors">
-                        <div class="header-text">Errors</div>
-                        <div class="current-errors">0</div>
-                    </div>
-                    <div class="timer">
-                      <div class="header-text">Time</div>
-                      <div class="current-time">60s</div>
-                    </div>
-                    <div class="accuracy">
-                      <div class="header-text">% Accuracy</div>
-                      <div class="current-accuracy">100</div>
-                    </div>
-                </div>
 
                 <div class="lesson-selector">
                     <label for="competency-selector" class="competency-selector-label">Select A Competency Section</label>
@@ -109,20 +91,41 @@ function typingtest_render_tool_shortcode() {
                         <option value="14">14</option>
                         <option value="15">15</option>
                     </select>
+                    <div class="buttons-wrapper">
+                        <button class="button start-button">Start</button>    
+                        <button class="button restart-button">Restart</button>
+                        <button class="button profile-button">User Profile</button>
+                        <button class="button help-button">Help</button>
+                    </div>
                 </div>
+
+                <div class="typingtest-header">
+                    <div class="wpm">
+                        <div class="header-text">WPM</div>
+                        <div class="current-wpm">100</div>
+                    </div>
+                    <div class="errors">
+                        <div class="header-text">Errors</div>
+                        <div class="current-errors">0</div>
+                    </div>
+                    <div class="timer">
+                        <div class="header-text">Time</div>
+                        <div class="current-time">60s</div>
+                    </div>
+                    <div class="accuracy">
+                        <div class="header-text">% Accuracy</div>
+                        <div class="current-accuracy">100</div>
+                    </div>
+                </div>
+
                 <div class="lesson-wrapper">
-                <div class="lesson-content" spellcheck="false">
-                    Select a section and difficulty level, then hit start to begin the exercise.
-                </div>
-                <textarea class="input-area" spellcheck="false"></textarea>
-                </div>
-                <div class="buttons-wrapper">
-                    <button class="button start-button">Start</button>    
-                    <button class="button restart-button">Restart</button>
-                    <button class="button profile-button">User Profile</button>
-                    <button class="button help-button">Help</button>
+                    <div class="lesson-content" spellcheck="false">
+                        Select a section and difficulty level, then hit start to begin the exercise.
+                    </div>
+                    <textarea class="input-area" spellcheck="false"></textarea>
                 </div>
             </div>
+            
             <div id="user-profile-container">
                 <div id="user-profile-basic-info">
                     <div class="profile-info-section">
