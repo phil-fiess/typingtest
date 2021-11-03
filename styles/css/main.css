@@ -67,6 +67,39 @@
   margin-top: 0.5rem;
 }
 
+.lesson-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 1.5rem;
+}
+
+.lesson-content {
+  width: inherit;
+  height: inherit;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+textarea.input-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  resize: none;
+  font-size: 1.5rem;
+  border: none;
+  width: inherit;
+  height: inherit;
+  -webkit-text-fill-color: transparent;
+  color: #000000;
+}
+
+div.typingtest-container > div.lesson-wrapper > textarea.input-area {
+  padding: 1.5rem;
+  margin: 0;
+  border: 0;
+}
+
 .typingtest-heading {
   margin-bottom: 20px;
   font-size: 3rem;
@@ -108,21 +141,11 @@
 .lesson-content {
   background-color: rgba(2, 159, 178, 0.5);
   font-size: 1.5rem;
-  margin: 1.5rem;
-  padding: 1.5rem;
   box-shadow: black 5px 8px 5px;
 }
 
 .input-area {
   background-color: rgba(2, 159, 178, 0.2);
-  height: 80px;
-  width: 90%;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 15px;
-  padding: 20px;
-  border: 0px;
-  box-shadow: black 5px 8px 5px;
 }
 
 .restart-button {
@@ -134,13 +157,17 @@
   box-shadow: black 5px 8px 5px;
 }
 
+.char-input {
+  color: #029fb2;
+}
+
 .incorrect-char {
   color: #941f16;
   text-decoration: underline;
 }
 
 .correct-char {
-  color: #029fb2;
+  color: #000000;
 }
 
 #user-profile-container {

@@ -110,10 +110,12 @@ function typingtest_render_tool_shortcode() {
                         <option value="15">15</option>
                     </select>
                 </div>
+                <div class="lesson-wrapper">
                 <div class="lesson-content">
-                    Select a lesson and hit start to begin the exercise. 
+                    Select a section and difficulty level, then hit start to begin the exercise.
                 </div>
-                <textarea class="input-area" placeholder="start typing here..."></textarea>
+                <textarea class="input-area"></textarea>
+                </div>
                 <div class="buttons-wrapper">
                     <button class="button start-button">Start</button>    
                     <button class="button restart-button">Restart</button>
