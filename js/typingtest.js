@@ -20,7 +20,6 @@ jQuery(document).ready(function($){
     let wpm_text = $('.current-wpm');
     let quote_text = $('.lesson-content');
     let input_area = $('.input-area');
-    let restart_button = $('.restart-button');
     let wpm_group = $('.wpm');
     let errors_group = $('.errors');
     let accuracy_group = $('accuracy');
@@ -160,8 +159,6 @@ jQuery(document).ready(function($){
         accuracy_text.text(100);
         timer_text.text(timeLeft + 's');
         error_text.text(0);
-        restart_button.css('display', 'none');
-        start_button.css('display', 'block');
         wpm_group.css('display', 'none');
     }
 
@@ -187,15 +184,14 @@ jQuery(document).ready(function($){
 
         //disable inputs until restart is hit
         input_area.prop('disabled', true);
-        $('.profile-button').prop('disabled', true);
+        // $('.profile-button').prop('disabled', true);
 
 
         //show finishing message
         quote_text.text("Click on restart to start a new practise session.");
 
-        //display restart button
-        restart_button.css('display', 'block');
-        start_button.css('display', 'none');
+        //display restart button by changing Start button
+        start_button.html("Restart")
 
 
         //calculate wpm

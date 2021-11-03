@@ -92,8 +92,7 @@ function typingtest_render_tool_shortcode() {
                         <option value="15">15</option>
                     </select>
                     <div class="buttons-wrapper">
-                        <button class="button start-button">Start</button>    
-                        <button class="button restart-button">Restart</button>
+                        <button class="button start-button">Start</button>
                         <button class="button profile-button">User Profile</button>
                         <button class="button help-button">Help</button>
                     </div>
@@ -125,7 +124,7 @@ function typingtest_render_tool_shortcode() {
                     <textarea class="input-area" spellcheck="false"></textarea>
                 </div>
             </div>
-            
+
             <div id="user-profile-container">
                 <div id="user-profile-basic-info">
                     <div class="profile-info-section">
