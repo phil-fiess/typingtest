@@ -1,0 +1,17 @@
+#timerbar-base {
+  background-color: white;
+  height: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+#timerbar-progress {
+  background-color: black;
+  height: inherit;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=timerbar.css.map */

@@ -59,125 +59,127 @@ add_action('wp_ajax_nopriv_typingtest_display_admin_lesson', 'typingtest_display
 /**Typing Test Tool Shortcode. This renders the UI for the typing test. Just place it on a page and you're set. */
 function typingtest_render_tool_shortcode() { 
     return 
-        '<div class="typingtest-heading">
-            CPA Typing Speed Tester
-        </div>
-    
-        <div class="typingtest-container">
-                <div class="lesson-selector">
-                    <div class="selectors-wrapper">
-                        <div class="selector-label-wrapper">
-                            <label class="competency-selector-label" for="competency-selector">Select A Competency Section</label>
-                            <select name="competency-selector" id="tool-competency-selector">
-                                <option value="financial-reporting">Financial Reporting</option>
-                                <option value="management-accounting">Management Accounting</option>
-                                <option value="taxation">Taxation</option>
-                                <option value="assurance">Assurance</option>
-                                <option value="strategy-and-governance">Strategy and Governance</option>
-                                <option value="finance">Finance</option>
-                            </select>
-                        </div>
-                        <div class="selector-label-wrapper">
-                            <label class="level-selector-label" for="level-selector">Select A Difficulty Level</label>
-                            <select name="level-selector" id="tool-difficulty-selector">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                            </select>
-                        </div>
+        '<div class="typingtest-container">
+            <div class="lesson-selector">
+                <div class="selectors-wrapper">
+                    <div class="selector-label-wrapper">
+                        <label class="competency-selector-label" for="competency-selector">Select A Competency Section</label>
+                        <select name="competency-selector" id="tool-competency-selector">
+                            <option value="financial-reporting">Financial Reporting</option>
+                            <option value="management-accounting">Management Accounting</option>
+                            <option value="taxation">Taxation</option>
+                            <option value="assurance">Assurance</option>
+                            <option value="strategy-and-governance">Strategy and Governance</option>
+                            <option value="finance">Finance</option>
+                        </select>
                     </div>
-                    <div class="buttons-wrapper">
-                        <button class="button start-button">Start</button>
-                        <button class="button profile-button">User Profile</button>
-                        <button class="button help-button">Help</button>
+                    <div class="selector-label-wrapper">
+                        <label class="level-selector-label" for="level-selector">Select A Difficulty Level</label>
+                        <select name="level-selector" id="tool-difficulty-selector">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
                     </div>
                 </div>
-
-                <div class="lesson-wrapper">
-                    <div class="typingtest-header">
-                        <div class="wpm">
-                            <div class="header-text">WPM</div>
-                            <div class="current-wpm">100</div>
-                        </div>
-                        <div class="errors">
-                            <div class="header-text">Errors</div>
-                            <div class="current-errors">0</div>
-                        </div>
-                        <div class="timer">
-                            <div class="header-text">Time</div>
-                            <div class="current-time">60s</div>
-                        </div>
-                        <div class="accuracy">
-                            <div class="header-text">% Accuracy</div>
-                            <div class="current-accuracy">100</div>
-                        </div>
-                    </div>
-                    <div class="lesson-content" spellcheck="false">
-                        Select a section and difficulty level, then hit start to begin the exercise.
-                    </div>
-                    <textarea class="input-area" spellcheck="false"></textarea>
+                <div class="buttons-wrapper">
+                    <button class="button start-button">Start</button>
+                    <button class="button profile-button">User Profile</button>
+                    <button class="button help-button">Help</button>
                 </div>
             </div>
 
-            <div id="user-profile-container">
-                <div id="user-profile-basic-info">
-                    <div class="profile-info-section">
-                        <h2>Stats For:</h2>
-                        <h3 id="user-name"></h3>
-                        <h4 id="user-email"></h4>
-                        <h4 id="subscription-info"></h4>
-                        <h4 id="total-time-alltime"></h4>
+            <div class="lesson-wrapper">
+                <div class="typingtest-header">
+                    <div class="wpm">
+                        <div class="header-text">WPM</div>
+                        <div class="current-wpm">100</div>
+                    </div>
+                    <div class="errors">
+                        <div class="header-text">Errors</div>
+                        <div class="current-errors">0</div>
+                    </div>
+                    <div class="accuracy">
+                        <div class="header-text">% Accuracy</div>
+                        <div class="current-accuracy">100</div>
+                    </div>
+                    <div class="timer">
+                        <div class="header-text">Time</div>
+                        <div class="current-time">60s</div>
                     </div>
                 </div>
+                <div class="timer-bar">
+                    <div id="timerbar-base">
+                        <div id="timerbar-progress"></div>
+                        <div id="timerbar-text"></div>
+                    </div>
+                </div>
+                <div class="lesson-content" spellcheck="false">
+                    Select a section and difficulty level, then hit start to begin the exercise.
+                </div>
+                <textarea class="input-area" spellcheck="false"></textarea>
+            </div>
+        </div>
 
-                <div id="stats-section">
-                    <div class="alltime-stats-info-section">
-                        <h2 class="stats-title">All Time Statistics</h2>
-                        <h3 class="stats-header">Total Lessons</h3>
-                        <h5 class="stats-value total-lessons"></h5>
-                        <h3 class="stats-header">Total Time</h3>
-                        <h5 class="stats-value total-time"></h5>
-                        <h3 class="stats-header">Top Speed</h3>
-                        <h5 class="stats-value top-speed"></h5>
-                        <h3 class="stats-header">Average Speed</h3>
-                        <h5 class="stats-value average-speed"></h5>
-                    </div>
-                    <div class="today-stats-info-section">
-                        <h2 class="stats-title">Today\'s Statistics</h2>
-                        <h3 class="stats-header">Total Lessons</h3>
-                        <h5 class="stats-value total-lessons"></h5>
-                        <h3 class="stats-header">Total Time</h3>
-                        <h5 class="stats-value total-time"></h5>
-                        <h3 class="stats-header">Top Speed</h3>
-                        <h5 class="stats-value top-speed"></h5>
-                        <h3 class="stats-header">Average Speed</h3>
-                        <h5 class="stats-value average-speed"></h5>
-                    </div>
+        <div id="user-profile-container">
+            <div id="user-profile-basic-info">
+                <div class="profile-info-section">
+                    <h2>Stats For:</h2>
+                    <h3 id="user-name"></h3>
+                    <h4 id="user-email"></h4>
+                    <h4 id="subscription-info"></h4>
+                    <h4 id="total-time-alltime"></h4>
                 </div>
+            </div>
 
-                <div id="graphs-section">
-                    <div id="relative-speed">
-                        <canvas id="relative-speed-chart" width="800" height="800"></canvas>
-                    </div>
-                    <div id="speed-per-competency">
-                        <canvas id="speed-per-competency-chart" width="900" height="700"></canvas>
-                    </div>
+            <div id="stats-section">
+                <div class="alltime-stats-info-section">
+                    <h2 class="stats-title">All Time Statistics</h2>
+                    <h3 class="stats-header">Total Lessons</h3>
+                    <h5 class="stats-value total-lessons"></h5>
+                    <h3 class="stats-header">Total Time</h3>
+                    <h5 class="stats-value total-time"></h5>
+                    <h3 class="stats-header">Top Speed</h3>
+                    <h5 class="stats-value top-speed"></h5>
+                    <h3 class="stats-header">Average Speed</h3>
+                    <h5 class="stats-value average-speed"></h5>
                 </div>
-                <button class="typinglessons-button">Back to Lessons</button>
-                <button class="help-button">Help</button>    
-            </div>';
+                <div class="today-stats-info-section">
+                    <h2 class="stats-title">Today\'s Statistics</h2>
+                    <h3 class="stats-header">Total Lessons</h3>
+                    <h5 class="stats-value total-lessons"></h5>
+                    <h3 class="stats-header">Total Time</h3>
+                    <h5 class="stats-value total-time"></h5>
+                    <h3 class="stats-header">Top Speed</h3>
+                    <h5 class="stats-value top-speed"></h5>
+                    <h3 class="stats-header">Average Speed</h3>
+                    <h5 class="stats-value average-speed"></h5>
+                </div>
+            </div>
+
+            <div id="graphs-section">
+                <div id="relative-speed">
+                    <canvas id="relative-speed-chart" width="800" height="800"></canvas>
+                </div>
+                <div id="speed-per-competency">
+                    <canvas id="speed-per-competency-chart" width="900" height="700"></canvas>
+                </div>
+            </div>
+            <button class="typinglessons-button">Back to Lessons</button>
+            <button class="help-button">Help</button>    
+        </div>';
 }
 add_shortcode('typingtest_tool', 'typingtest_render_tool_shortcode');
 

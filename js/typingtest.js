@@ -15,6 +15,7 @@ jQuery(document).ready(function($){
 
     //element selectors for game display
     let timer_text = $('.current-time');
+    let timerbar_progress = $('#timerbar-progress');
     let accuracy_text = $('.current-accuracy');
     let error_text = $('.current-errors');
     let wpm_text = $('.current-wpm');
@@ -26,6 +27,7 @@ jQuery(document).ready(function($){
     let start_button = $('.start-button');
 
     let timeLeft = TIME_LIMIT;
+    let timeProgressWidth = (timeLeft / TIME_LIMIT) * 100;
     let timeElapsed = 0;
     let total_errors = 0;
     let errors = 0;
@@ -158,6 +160,7 @@ jQuery(document).ready(function($){
         quote_text.text('Click on the area below to start the game.');
         accuracy_text.text(100);
         timer_text.text(timeLeft + 's');
+        timerbar_progress.css("width", "100%");
         error_text.text(0);
         wpm_group.css('display', 'none');
     }
@@ -167,6 +170,9 @@ jQuery(document).ready(function($){
             timeLeft--;
             timeElapsed++;
             timer_text.text(timeLeft + "s");
+
+            timeProgressWidth = (timeLeft / TIME_LIMIT) * 100;
+            timerbar_progress.css("width", timeProgressWidth + "%");
         } else {
             finishGame();
         }
@@ -181,6 +187,7 @@ jQuery(document).ready(function($){
         console.log('time spent: ' + time_spent);
 
         clearInterval(timer);
+        timerbar_progress.css("width", "100%");
 
         //disable inputs until restart is hit
         input_area.prop('disabled', true);

@@ -1,6 +1,8 @@
 .typingtest-container {
   font-family: "Ruda", sans-serif;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .lesson-selector {
@@ -45,15 +47,17 @@
   height: 100%;
   margin-left: 2rem;
 }
-
-.lesson-content {
+.lesson-wrapper .typingtest-header {
+  display: flex;
+  align-items: center;
+}
+.lesson-wrapper .lesson-content {
   width: inherit;
   height: inherit;
   padding: 1.5rem;
   margin: 2rem 0.5rem 0 0.5rem;
 }
-
-.input-area {
+.lesson-wrapper .input-area {
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -64,23 +68,11 @@
   width: inherit;
   height: inherit;
 }
-
-div.typingtest-container > div.lesson-wrapper > .input-area {
+.lesson-wrapper div.typingtest-container > div.lesson-wrapper > .input-area {
   padding: 1.5rem;
   margin: 0;
   border: 0;
   color: transparent;
-}
-
-.typingtest-heading {
-  margin-bottom: 20px;
-  font-size: 3rem;
-  color: black;
-}
-
-.typingtest-header {
-  display: flex;
-  align-items: center;
 }
 
 .timer, .errors, .accuracy,
@@ -91,7 +83,6 @@ div.typingtest-container > div.lesson-wrapper > .input-area {
   margin: 8px;
   padding: 12px;
   border-radius: 20%;
-  box-shadow: black 5px 8px 5px;
 }
 
 .wpm {
@@ -113,15 +104,6 @@ div.typingtest-container > div.lesson-wrapper > .input-area {
 .lesson-content {
   background-color: rgba(2, 159, 178, 0.5);
   font-size: 1.5rem;
-  box-shadow: black 5px 8px 5px;
-}
-
-.restart-button {
-  background-color: #326765;
-  font-size: 1.5rem;
-  padding: 10px;
-  border: 0px;
-  box-shadow: black 5px 8px 5px;
 }
 
 .char-input {
@@ -139,6 +121,12 @@ div.typingtest-container > div.lesson-wrapper > .input-area {
 
 #user-profile-container {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .typingtest-container {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=typingtest.css.map */
