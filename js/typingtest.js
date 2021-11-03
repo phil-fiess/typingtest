@@ -138,6 +138,7 @@ jQuery(document).ready(function($){
      */
 
     function startGame() {
+        input_area.prop('disabled', false);
         resetValues();
         updateQuote();
         clearInterval(timer);
@@ -152,7 +153,7 @@ jQuery(document).ready(function($){
         accuracy = 0;
         characterTyped = 0;
         quoteNo = 0;
-        input_area.disabled = false;
+        $('.profile-button').prop('disabled', false);
        
         input_area.val("");
         quote_text.text('Click on the area below to start the game.');
@@ -184,8 +185,10 @@ jQuery(document).ready(function($){
 
         clearInterval(timer);
 
-        //disable input
-        input_area.disabled = true;
+        //disable inputs until restart is hit
+        input_area.prop('disabled', true);
+        $('.profile-button').prop('disabled', true);
+
 
         //show finishing message
         quote_text.text("Click on restart to start a new practise session.");

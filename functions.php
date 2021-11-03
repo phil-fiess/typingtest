@@ -312,7 +312,6 @@ function typingtest_retrieve_profile() {
         foreach($results as $result) {
             //compound all individual values first, or add class data
             if($result->user_id == $id) {
-
                 $user_total_lessons_alltime += 1;
                 $user_total_time_alltime += $result->time_spent;
                 if ($result->words_per_minute > $user_top_speed_alltime){
@@ -323,12 +322,10 @@ function typingtest_retrieve_profile() {
                 //I NEED TO BE DONE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
                 //TODAY'S SCORES NEED TO BE COMPUTED!!!!!!!!!!!!!!!!!//
 
-                $today = new DateTime;
-                $test_date = new DateTime($result->test_date);
-                $today->setTime(0,0,0);
-                $test_date->setTime(0,0,0);
-
-                if ($today->diff($test_date) != 0) {
+                $today = date('Y-m-d');
+                $test_date_time = strtotime($result->test_date);
+                $test_date = date('Y-m-d', $test_date_time);
+                if (strtotime($today) == strtotime($test_date)) {
                     $user_total_time_today += $result->time_spent;
                     $user_total_lessons_today += 1;
                     if ($result->words_per_minute > $user_top_speed_today){
@@ -344,26 +341,32 @@ function typingtest_retrieve_profile() {
                     case "financial-reporting":
                         $user_financial_reporting_speed += $result->words_per_minute;
                         $user_total_financial_reporting_games++;
+                        $total_financial_reporting_games++;
                         break;
                     case "management-accounting":
                         $user_management_accounting_speed += $result->words_per_minute;
                         $user_total_management_accounting_games++;
+                        $total_management_accounting_games++;
                         break;
                     case "taxation":
                         $user_taxation_speed += $result->words_per_minute;
                         $user_total_taxation_games++;
+                        $total_taxation_games++;
                         break;
                     case "assurance":
                         $user_assurance_speed += $result->words_per_minute;
                         $user_total_assurance_games++;
+                        $total_assurance_games++;
                         break;
                     case "strategy-and-governance":
                         $user_strategy_and_governance_speed += $result->words_per_minute;
                         $user_total_strategy_and_governance_games++;
+                        $total_strategy_and_governance_games++;
                         break;
                     case "finance":
                         $user_finance_speed += $result->words_per_minute;
                         $user_total_finance_games++;
+                        $total_finance_games++;
                         break;
                     default:
                         break;
@@ -427,7 +430,11 @@ function typingtest_retrieve_profile() {
 
         //average speeds for top bar charts
         $user_average_speed_alltime /= count($results);
-        $user_average_speed_today /= $user_total_lessons_today;
+        if ($user_total_lessons_today != 0) {
+            $user_average_speed_today /= $user_total_lessons_today;
+        } else {
+            $user_average_speed_today = 0;
+        }
 
         //Parse it all into an associative array and send it back 
         $response = array(
