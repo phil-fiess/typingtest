@@ -105,26 +105,25 @@ function typingtest_render_tool_shortcode() {
                     </div>
                 </div>
 
-                <div class="typingtest-header">
-                    <div class="wpm">
-                        <div class="header-text">WPM</div>
-                        <div class="current-wpm">100</div>
-                    </div>
-                    <div class="errors">
-                        <div class="header-text">Errors</div>
-                        <div class="current-errors">0</div>
-                    </div>
-                    <div class="timer">
-                        <div class="header-text">Time</div>
-                        <div class="current-time">60s</div>
-                    </div>
-                    <div class="accuracy">
-                        <div class="header-text">% Accuracy</div>
-                        <div class="current-accuracy">100</div>
-                    </div>
-                </div>
-
                 <div class="lesson-wrapper">
+                    <div class="typingtest-header">
+                        <div class="wpm">
+                            <div class="header-text">WPM</div>
+                            <div class="current-wpm">100</div>
+                        </div>
+                        <div class="errors">
+                            <div class="header-text">Errors</div>
+                            <div class="current-errors">0</div>
+                        </div>
+                        <div class="timer">
+                            <div class="header-text">Time</div>
+                            <div class="current-time">60s</div>
+                        </div>
+                        <div class="accuracy">
+                            <div class="header-text">% Accuracy</div>
+                            <div class="current-accuracy">100</div>
+                        </div>
+                    </div>
                     <div class="lesson-content" spellcheck="false">
                         Select a section and difficulty level, then hit start to begin the exercise.
                     </div>
