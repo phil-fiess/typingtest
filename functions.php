@@ -58,39 +58,46 @@ add_action('wp_ajax_nopriv_typingtest_display_admin_lesson', 'typingtest_display
 
 /**Typing Test Tool Shortcode. This renders the UI for the typing test. Just place it on a page and you're set. */
 function typingtest_render_tool_shortcode() { 
-    return '<div class="typingtest-container">
-                <div class="typingtest-heading">
-                    CPA Typing Speed Tester
-                </div>
-
+    return 
+        '<div class="typingtest-heading">
+            CPA Typing Speed Tester
+        </div>
+    
+        <div class="typingtest-container">
                 <div class="lesson-selector">
-                    <label for="competency-selector" class="competency-selector-label">Select A Competency Section</label>
-                    <select name="competency-selector" id="tool-competency-selector">
-                        <option value="financial-reporting">Financial Reporting</option>
-                        <option value="management-accounting">Management Accounting</option>
-                        <option value="taxation">Taxation</option>
-                        <option value="assurance">Assurance</option>
-                        <option value="strategy-and-governance">Strategy and Governance</option>
-                        <option value="finance">Finance</option>
-                    </select>
-                    <label for="level-selector" class="level-selector-label">Select A Difficulty Level</label>
-                    <select name="level-selector" id="tool-difficulty-selector">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                    </select>
+                    <div class="selectors-wrapper">
+                        <div class="selector-label-wrapper">
+                            <label class="competency-selector-label" for="competency-selector">Select A Competency Section</label>
+                            <select name="competency-selector" id="tool-competency-selector">
+                                <option value="financial-reporting">Financial Reporting</option>
+                                <option value="management-accounting">Management Accounting</option>
+                                <option value="taxation">Taxation</option>
+                                <option value="assurance">Assurance</option>
+                                <option value="strategy-and-governance">Strategy and Governance</option>
+                                <option value="finance">Finance</option>
+                            </select>
+                        </div>
+                        <div class="selector-label-wrapper">
+                            <label class="level-selector-label" for="level-selector">Select A Difficulty Level</label>
+                            <select name="level-selector" id="tool-difficulty-selector">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="buttons-wrapper">
                         <button class="button start-button">Start</button>
                         <button class="button profile-button">User Profile</button>
