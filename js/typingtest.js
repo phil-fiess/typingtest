@@ -16,14 +16,15 @@ jQuery(document).ready(function($){
     //element selectors for game display
     let timer_text = $('.current-time');
     let timerbar_progress = $('#timerbar-progress');
-    let accuracy_text = $('.current-accuracy');
-    let error_text = $('.current-errors');
-    let wpm_text = $('.current-wpm');
+    let timerbar_text = $('#timerbar-text').html(TIME_LIMIT + " seconds");
+    let accuracy_text = $('#current-accuracy');
+    let error_text = $('#current-errors');
+    let wpm_text = $('#current-wpm');
     let quote_text = $('.lesson-content');
     let input_area = $('.input-area');
-    let wpm_group = $('.wpm');
-    let errors_group = $('.errors');
-    let accuracy_group = $('accuracy');
+    let wpm_group = $('#wpm');
+    let errors_group = $('#errors');
+    let accuracy_group = $('#accuracy');
     let start_button = $('.start-button');
 
     let timeLeft = TIME_LIMIT;
@@ -144,6 +145,7 @@ jQuery(document).ready(function($){
         updateQuote();
         clearInterval(timer);
         timer = setInterval(updateTimer, 1000);
+        timerbar_text.html(TIME_LIMIT + " seconds");
     }
 
     function resetValues() {
@@ -162,6 +164,7 @@ jQuery(document).ready(function($){
         timer_text.text(timeLeft + 's');
         timerbar_progress.css("width", "100%");
         error_text.text(0);
+        timerbar_text.html(TIME_LIMIT + " seconds");
     }
 
     function updateTimer() {
@@ -172,6 +175,7 @@ jQuery(document).ready(function($){
 
             timeProgressWidth = (timeLeft / TIME_LIMIT) * 100;
             timerbar_progress.css("width", timeProgressWidth + "%");
+            timerbar_text.html(timeLeft + " seconds");
         } else {
             finishGame();
         }
@@ -186,7 +190,7 @@ jQuery(document).ready(function($){
         console.log('time spent: ' + time_spent);
 
         clearInterval(timer);
-        timerbar_progress.css("width", "100%");
+        // timerbar_progress.css("width", "100%");
 
         //disable inputs until restart is hit
         input_area.prop('disabled', true);

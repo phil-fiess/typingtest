@@ -102,18 +102,18 @@ function typingtest_render_tool_shortcode() {
             </div>
 
             <div class="lesson-wrapper">
-                <div class="typingtest-header">
-                    <div class="wpm">
-                        <div class="header-text">WPM</div>
-                        <div class="current-wpm">--</div>
+                <div class="typingtest-statsbar">
+                    <div class="statsbox" id="wpm">
+                        <div class="statsbox-label">WPM</div>
+                        <div class="statsbox-current" id="current-wpm">--</div>
                     </div>
-                    <div class="errors">
-                        <div class="header-text">Errors</div>
-                        <div class="current-errors">--</div>
+                    <div class="statsbox" id="errors">
+                        <div class="statsbox-label">Errors</div>
+                        <div class="statsbox-current" id="current-errors">--</div>
                     </div>
-                    <div class="accuracy">
-                        <div class="header-text">% Accuracy</div>
-                        <div class="current-accuracy">--</div>
+                    <div class="statsbox" id="accuracy">
+                        <div class="statsbox-label">% Accuracy</div>
+                        <div class="statsbox-current" id="current-accuracy">--</div>
                     </div>
                 </div>
                 <div class="timer-bar">
