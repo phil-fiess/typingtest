@@ -65,6 +65,10 @@
   outline: none;
 }
 
+body.is-dark-theme .statsbox-label {
+  color: black;
+}
+
 .char-input {
   color: #029fb2;
 }
@@ -88,4 +92,4 @@
   }
 }
 
-/*# sourceMappingURL=typingtest.css.map */
+/*# sourceMappingURL=lesson.css.map */

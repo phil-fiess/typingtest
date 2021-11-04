@@ -1,0 +1,112 @@
+@use '../colours.scss' as colours;
+
+
+
+.lesson-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 2rem;
+  
+    .typingtest-statsbar {
+        display: flex;
+        align-items: center;
+  
+        .statsbox {
+            background-color: rgba(colours.$turquoiseblue, 80%);
+            height: 7rem;
+            width: 8rem;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            margin: 1rem 0 1rem 0;
+        }
+    
+        .statsbox-label {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: lighten(colours.$darkbluegrey, 15%);
+        }
+    
+        .statsbox-current {
+            font-size: 2.5rem;
+            width: 100px;
+            color: colours.$darkbluegrey;
+        }
+    
+        #errors {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+  
+
+    #lessontext-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(colours.$black, 0%);
+    }
+  
+    .lesson-text {
+        font-size: 1.5rem;
+        padding: 2rem;
+        border-radius: 0.8rem;
+        top: 0;
+        left: 0;
+    }
+  
+    #lesson-content {
+        background-color: rgba(colours.$turquoiseblue, 50%);
+        z-index: 10;
+    }
+  
+    #lesson-input {
+        background-color: rgba(colours.$darkred, 0%);
+        color: transparent;
+        resize: none;
+        border: none;
+        z-index: 20;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: inherit;
+        width: inherit;
+  
+        &:focus {
+        outline: none;
+        }
+    }
+}
+  
+  
+body.is-dark-theme .statsbox-label {
+    color: darken(colours.$lightgrey, 45%);
+}
+
+      
+.char-input {
+    color: colours.$turquoiseblue;
+}
+    
+.incorrect-char {
+    color: colours.$darkred;
+    text-decoration: underline;
+}
+    
+.correct-char {
+    color: colours.$black;
+}
+
+#user-profile-container {
+    display: none;
+}
+
+  
+@media screen and (max-width: 768px) {
+
+    .typingtest-container {
+        flex-direction: column;
+    }
+}

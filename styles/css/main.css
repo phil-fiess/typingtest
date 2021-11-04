@@ -46,6 +46,35 @@
 }
 
 /**END ADMIN SECTION **/
+.timer-bar {
+  margin-bottom: 2rem;
+}
+.timer-bar #timerbar-base {
+  background-color: #666666;
+  height: 2rem;
+  position: relative;
+  z-index: 0;
+  border-radius: 1rem;
+}
+.timer-bar #timerbar-progress {
+  background-color: #1c2326;
+  height: inherit;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  border-radius: 1rem;
+}
+.timer-bar #timerbar-text {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  color: #03cce4;
+  display: flex;
+  justify-content: center;
+}
+
 .lesson-wrapper {
   position: relative;
   width: 100%;
@@ -113,6 +142,10 @@
   outline: none;
 }
 
+body.is-dark-theme .statsbox-label {
+  color: black;
+}
+
 .char-input {
   color: #029fb2;
 }
@@ -135,35 +168,6 @@
     flex-direction: column;
   }
 }
-.timer-bar {
-  margin-bottom: 2rem;
-}
-.timer-bar #timerbar-base {
-  background-color: #666666;
-  height: 2rem;
-  position: relative;
-  z-index: 0;
-  border-radius: 1rem;
-}
-.timer-bar #timerbar-progress {
-  background-color: #1c2326;
-  height: inherit;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  border-radius: 1rem;
-}
-.timer-bar #timerbar-text {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  width: 100%;
-  color: #03cce4;
-  display: flex;
-  justify-content: center;
-}
-
 .lesson-selector {
   align-self: flex-start;
   display: grid;
