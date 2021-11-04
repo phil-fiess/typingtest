@@ -222,12 +222,16 @@ body.is-dark-theme .statsbox-label {
 #user-profile-container {
   max-width: 65%;
 }
+#user-profile-container h2 {
+  font-size: 2.5rem;
+}
 #user-profile-container .wrapper-buttons:first-child {
   margin-bottom: 2rem;
 }
 #user-profile-container .wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 #user-profile-container .label-profile {
   text-transform: uppercase;
@@ -257,6 +261,16 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .button:focus {
   outline: none;
+}
+#user-profile-container .profile-info-section {
+  background-color: rgba(28, 35, 38, 0.5);
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+#user-profile-container .stats-info-section {
+  background-color: rgba(28, 35, 38, 0.2);
+  padding: 2rem;
+  border-radius: 0.8rem;
 }
 
 .typingtest-container {
