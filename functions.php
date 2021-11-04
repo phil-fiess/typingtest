@@ -153,27 +153,31 @@ function typingtest_render_tool_shortcode() {
                         <p class="output-profile" id="subscription-info"></h4>
                     </div>
                 </div>
-                <div class="alltime-stats-info-section">
-                    <h2 class="stats-title">All Time Statistics</h2>
-                    <h3 class="stats-header">Total Lessons</h3>
-                    <h5 class="stats-value total-lessons"></h5>
-                    <h3 class="stats-header">Total Time</h3>
-                    <h5 class="stats-value total-time"></h5>
-                    <h3 class="stats-header">Top Speed</h3>
-                    <h5 class="stats-value top-speed"></h5>
-                    <h3 class="stats-header">Average Speed</h3>
-                    <h5 class="stats-value average-speed"></h5>
-                </div>
                 <div class="today-stats-info-section">
-                    <h2 class="stats-title">Today\'s Statistics</h2>
-                    <h3 class="stats-header">Total Lessons</h3>
-                    <h5 class="stats-value total-lessons"></h5>
-                    <h3 class="stats-header">Total Time</h3>
-                    <h5 class="stats-value total-time"></h5>
-                    <h3 class="stats-header">Top Speed</h3>
-                    <h5 class="stats-value top-speed"></h5>
-                    <h3 class="stats-header">Average Speed</h3>
-                    <h5 class="stats-value average-speed"></h5>
+                    <h2 class="heading-profile-stats stats-title">Today\'s Statistics</h2>
+                    <div class="wrapper-stats">
+                        <h4 class="label-stats stats-header">Total Lessons </h4>
+                        <p class="value-stats total-lessons"></p>
+                        <h4 class="label-stats stats-header">Total Time </h4>
+                        <p class="value-stats total-time"></p>
+                        <h4 class="label-stats stats-header">Top Speed </h4>
+                        <p class="value-stats top-speed"></p>
+                        <h4 class="label-stats stats-header">Average Speed </h4>
+                        <p class="value-stats average-speed"></p>
+                    </div>
+                </div>
+                <div class="alltime-stats-info-section">
+                    <h2 class="heading-profile-stats stats-title">Total Statistics</h2>
+                    <div class="wrapper-stats">
+                        <h4 class="label-stats stats-header">Total Lessons </h4>
+                        <p class="value-stats total-lessons"></p>
+                        <h4 class="label-stats stats-header">Total Time </h4>
+                        <p class="value-stats total-time"></p>
+                        <h4 class="label-stats stats-header">Top Speed </h4>
+                        <p class="value-stats top-speed"></p>
+                        <h4 class="label-stats stats-header">Average Speed </h4>
+                        <p class="value-stats average-speed"></p>
+                    </div>
                 </div>
             </div>
 

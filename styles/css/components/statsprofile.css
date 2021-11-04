@@ -1,24 +1,35 @@
 #user-profile-container {
-  max-width: 60%;
+  max-width: 65%;
 }
 #user-profile-container .wrapper-buttons:first-child {
   margin-bottom: 2rem;
 }
 #user-profile-container .wrapper {
   display: flex;
+  justify-content: space-between;
 }
 #user-profile-container .label-profile {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 1rem;
 }
-#user-profile-container #heading_userprofile {
+#user-profile-container .label-stats {
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+#user-profile-container .value-stats {
+  margin-top: 1rem;
+}
+#user-profile-container .heading-profile-stats {
   text-transform: uppercase;
   font-weight: bolder;
 }
-#user-profile-container .alltime-stats-info-section {
-  margin-left: 2rem;
-  margin-right: 2rem;
+#user-profile-container .wrapper-stats {
+  display: grid;
+  grid-template-columns: 0.6fr 0.3fr;
+  grid-template-rows: repeat(1fr);
 }
 #user-profile-container .button {
   border-radius: 0.8rem;
