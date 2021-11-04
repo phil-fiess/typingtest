@@ -115,10 +115,6 @@ function typingtest_render_tool_shortcode() {
                         <div class="header-text">% Accuracy</div>
                         <div class="current-accuracy">100</div>
                     </div>
-                    <div class="timer">
-                        <div class="header-text">Time</div>
-                        <div class="current-time">60s</div>
-                    </div>
                 </div>
                 <div class="timer-bar">
                     <div id="timerbar-base">
