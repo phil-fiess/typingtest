@@ -79,7 +79,6 @@
   font-family: "Ruda", sans-serif;
   display: flex;
   flex-wrap: nowrap;
-  max-width: 65% !important;
 }
 
 .lesson-wrapper {
@@ -93,8 +92,6 @@
 }
 .lesson-wrapper .typingtest-statsbar .statsbox {
   background-color: rgba(2, 159, 178, 0.8);
-  height: 7rem;
-  width: 8rem;
   padding: 1rem;
   border-radius: 0.8rem;
   margin: 1rem 0 1rem 0;
@@ -107,7 +104,6 @@
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-current {
   font-size: 2.5rem;
-  width: 100px;
   color: #1c2326;
 }
 .lesson-wrapper .typingtest-statsbar #errors {
@@ -179,19 +175,39 @@ body.is-dark-theme .statsbox-label {
 @media screen and (max-width: 768px) {
   .typingtest-container {
     flex-direction: column;
+    margin-right: 1rem !important;
+    margin-left: 1rem !important;
+    min-width: 100% !important;
+  }
+  .typingtest-container .selector-label-wrapper, .typingtest-container .button {
+    margin-left: 0 !important;
   }
 
   .lesson-wrapper {
     margin: 0 0 0 0;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .statsbox-current {
+    width: 20vw;
   }
 }
 @media screen and (min-width: 769px) {
   .typingtest-container {
     flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 65% !important;
   }
 
   .lesson-wrapper {
-    margin: 0 0 0 6rem;
+    margin: 0 0 0 4rem;
+    max-width: 50%;
+  }
+
+  .statsbox-current {
+    width: 5vw;
   }
 }
 .lesson-selector {

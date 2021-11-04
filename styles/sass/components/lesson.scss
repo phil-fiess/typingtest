@@ -6,7 +6,6 @@
     font-family: 'Ruda', sans-serif;
     display: flex;
     flex-wrap: nowrap;
-    max-width: 65% !important;
 }
 
 .lesson-wrapper {
@@ -20,8 +19,6 @@
   
         .statsbox {
             background-color: rgba(colours.$turquoiseblue, 80%);
-            height: 7rem;
-            width: 8rem;
             padding: 1rem;
             border-radius: 0.8rem;
             margin: 1rem 0 1rem 0;
@@ -36,7 +33,6 @@
     
         .statsbox-current {
             font-size: 2.5rem;
-            width: 100px;
             color: colours.$darkbluegrey;
         }
     
@@ -122,10 +118,23 @@ body.is-dark-theme .statsbox-label {
 
     .typingtest-container {
         flex-direction: column;
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+        min-width: 100% !important;
+
+        .selector-label-wrapper, .button {
+            margin-left: 0 !important;
+        }
     }
 
     .lesson-wrapper {
         margin: 0 0 0 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .statsbox-current {
+        width: 20vw;
     }
 }
 
@@ -133,9 +142,17 @@ body.is-dark-theme .statsbox-label {
 
     .typingtest-container {
         flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 65% !important;
     }
 
     .lesson-wrapper {
-        margin: 0 0 0 6rem;
+        margin: 0 0 0 4rem;
+        max-width: 50%;
+    }
+
+    .statsbox-current {
+        width: 5vw;
     }
 }

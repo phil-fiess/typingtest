@@ -116,7 +116,7 @@ function typingtest_render_tool_shortcode() {
                         <div class="statsbox-current" id="current-errors">--</div>
                     </div>
                     <div class="statsbox" id="accuracy">
-                        <div class="statsbox-label">% Accuracy</div>
+                        <div class="statsbox-label">Accuracy</div>
                         <div class="statsbox-current" id="current-accuracy">--</div>
                     </div>
                 </div>
