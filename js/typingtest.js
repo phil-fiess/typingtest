@@ -162,7 +162,6 @@ jQuery(document).ready(function($){
         timer_text.text(timeLeft + 's');
         timerbar_progress.css("width", "100%");
         error_text.text(0);
-        wpm_group.css('display', 'none');
     }
 
     function updateTimer() {
@@ -193,22 +192,17 @@ jQuery(document).ready(function($){
         input_area.prop('disabled', true);
         // $('.profile-button').prop('disabled', true);
 
-
         //show finishing message
         quote_text.text("Click on restart to start a new practise session.");
 
         //display restart button by changing Start button
         start_button.html("Restart")
 
-
         //calculate wpm
         wpm = Math.round((((characterTyped / 5) / timeElapsed) * 60));
 
         //update wpm text
         wpm_text.text(wpm);
-
-        //display the wpm 
-        wpm_group.css('display', 'block');
 
         let results = {
             competency: $('select[name="competency-selector"]').val(),

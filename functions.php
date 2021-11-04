@@ -105,15 +105,15 @@ function typingtest_render_tool_shortcode() {
                 <div class="typingtest-header">
                     <div class="wpm">
                         <div class="header-text">WPM</div>
-                        <div class="current-wpm">100</div>
+                        <div class="current-wpm">--</div>
                     </div>
                     <div class="errors">
                         <div class="header-text">Errors</div>
-                        <div class="current-errors">0</div>
+                        <div class="current-errors">--</div>
                     </div>
                     <div class="accuracy">
                         <div class="header-text">% Accuracy</div>
-                        <div class="current-accuracy">100</div>
+                        <div class="current-accuracy">--</div>
                     </div>
                 </div>
                 <div class="timer-bar">
