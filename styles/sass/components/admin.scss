@@ -1,3 +1,6 @@
+@use '../colours.scss' as colours;
+@use '../mixins.scss' as mixins;
+
 // admin section styling
 #typingtest-admin-wrapper {
     width: 100%;

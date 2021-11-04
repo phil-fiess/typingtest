@@ -60,6 +60,7 @@ add_action('wp_ajax_nopriv_typingtest_display_admin_lesson', 'typingtest_display
 function typingtest_render_tool_shortcode() { 
     return 
         '<div class="typingtest-container">
+
             <div class="lesson-selector">
                 <div class="selectors-wrapper">
                     <div class="selector-label-wrapper">
@@ -131,18 +132,27 @@ function typingtest_render_tool_shortcode() {
             </div>
         </div>
 
-        <div id="user-profile-container">
-            <div id="user-profile-basic-info">
-                <div class="profile-info-section">
-                    <h2>Stats For:</h2>
-                    <h3 id="user-name"></h3>
-                    <h4 id="user-email"></h4>
-                    <h4 id="subscription-info"></h4>
-                    <h4 id="total-time-alltime"></h4>
-                </div>
-            </div>
 
-            <div id="stats-section">
+
+        <div id="user-profile-container">
+
+            <div class="wrapper-buttons">
+                <button class="button typinglessons-button">Back to Lessons</button>
+                <button class="button help-button">Help</button>
+            </div>  
+
+            <div class="wrapper">
+                <div id="user-profile-basic-info">
+                    <div class="profile-info-section">
+                        <h2 class="heading-profile-stats" id="heading_userprofile">User Profile</h2>
+                        <h4 class="label-profile" id="label-user-name">Name </h4>
+                        <p class="output-profile" id="user-name"></h3>
+                        <h4 class="label-profile" id="label-user-email">Email </h4>
+                        <p class="output-profile" id="user-email"></h4>
+                        <h4 class="label-profile" id="label-user-subscription">Subscription </h4>
+                        <p class="output-profile" id="subscription-info"></h4>
+                    </div>
+                </div>
                 <div class="alltime-stats-info-section">
                     <h2 class="stats-title">All Time Statistics</h2>
                     <h3 class="stats-header">Total Lessons</h3>
@@ -175,9 +185,13 @@ function typingtest_render_tool_shortcode() {
                     <canvas id="speed-per-competency-chart" width="900" height="700"></canvas>
                 </div>
             </div>
-            <button class="typinglessons-button">Back to Lessons</button>
-            <button class="help-button">Help</button>    
-        </div>';
+            <div class="wrapper-buttons">
+                <button class="button typinglessons-button">Back to Lessons</button>
+                <button class="button help-button">Help</button>
+            </div>
+
+        </div>
+        ';
 }
 add_shortcode('typingtest_tool', 'typingtest_render_tool_shortcode');
 

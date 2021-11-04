@@ -1,9 +1,10 @@
 @use 'colours.scss';
+@use 'mixins.scss';
 @use 'components/admin.scss';
-// @use 'components/typingtest.scss';
 @use 'components/timerbar.scss';
 @use 'components/lesson.scss';
 @use 'components/lessonselector.scss';
+@use 'components/statsprofile.scss';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap');
@@ -16,8 +17,15 @@
 // }
 
 .typingtest-container {
+  font-family: 'Ruda', sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#user-profile-container {
+  font-family: 'Ruda', sans-serif;
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Ruda', sans-serif;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
   }
+}

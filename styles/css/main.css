@@ -212,10 +212,39 @@ body.is-dark-theme .statsbox-label {
   grid-column: 2/3;
 }
 .lesson-selector .buttons-wrapper .button {
-  margin: 0.5rem;
   border-radius: 0.8rem;
+  margin: 0.5rem;
 }
 .lesson-selector .buttons-wrapper .button:focus {
+  outline: none;
+}
+
+#user-profile-container {
+  max-width: 60%;
+}
+#user-profile-container .wrapper-buttons:first-child {
+  margin-bottom: 2rem;
+}
+#user-profile-container .wrapper {
+  display: flex;
+}
+#user-profile-container .label-profile {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+#user-profile-container #heading_userprofile {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+#user-profile-container .alltime-stats-info-section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#user-profile-container .button {
+  border-radius: 0.8rem;
+}
+#user-profile-container .button:focus {
   outline: none;
 }
 
@@ -224,6 +253,13 @@ body.is-dark-theme .statsbox-label {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+#user-profile-container {
+  font-family: "Ruda", sans-serif;
+}
+#user-profile-container h1, #user-profile-container h2, #user-profile-container h3, #user-profile-container h4, #user-profile-container h5, #user-profile-container h6 {
+  font-family: "Ruda", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

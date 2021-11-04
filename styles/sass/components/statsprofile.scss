@@ -1,0 +1,35 @@
+@use '../colours.scss' as colours;
+@use '../mixins.scss' as mixins;
+
+
+#user-profile-container {
+    max-width: 60%;
+
+    .wrapper-buttons:first-child {
+        margin-bottom: 2rem;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .label-profile {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    #heading_userprofile {
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+    .alltime-stats-info-section {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .button {
+        @include mixins.rounded-button();
+    }
+}

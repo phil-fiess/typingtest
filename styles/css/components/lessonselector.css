@@ -42,8 +42,8 @@
   grid-column: 2/3;
 }
 .lesson-selector .buttons-wrapper .button {
-  margin: 0.5rem;
   border-radius: 0.8rem;
+  margin: 0.5rem;
 }
 .lesson-selector .buttons-wrapper .button:focus {
   outline: none;

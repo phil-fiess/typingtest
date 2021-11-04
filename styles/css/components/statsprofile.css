@@ -1,0 +1,30 @@
+#user-profile-container {
+  max-width: 60%;
+}
+#user-profile-container .wrapper-buttons:first-child {
+  margin-bottom: 2rem;
+}
+#user-profile-container .wrapper {
+  display: flex;
+}
+#user-profile-container .label-profile {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+#user-profile-container #heading_userprofile {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+#user-profile-container .alltime-stats-info-section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+#user-profile-container .button {
+  border-radius: 0.8rem;
+}
+#user-profile-container .button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=statsprofile.css.map */

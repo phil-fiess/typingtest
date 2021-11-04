@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
                     //populate the top fields with the data
                     $('#user-name').text(profileData.user_data.profile.first_name + " " + profileData.user_data.profile.last_name);
                     $('#user-email').text(profileData.user_data.profile.email);
-                    $('#subscription-info').text('this will be implemented when payment system is configured');
+                    $('#subscription-info').text('--');
                     $('#total-time-alltime').text("Total time (all time)" + profileData.user_data.alltime.total_time);
 
                     $('.alltime-stats-info-section .total-lessons').text(profileData.user_data.alltime.total_lessons);
