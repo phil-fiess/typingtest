@@ -253,7 +253,7 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .wrapper-stats {
   display: grid;
-  grid-template-columns: 0.6fr 0.3fr;
+  grid-template-columns: 0.7fr 0.3fr;
   grid-template-rows: repeat(1fr);
 }
 #user-profile-container .button {
@@ -262,7 +262,7 @@ body.is-dark-theme .statsbox-label {
 #user-profile-container .button:focus {
   outline: none;
 }
-#user-profile-container .profile-info-section {
+#user-profile-container #user-profile-basic-info {
   background-color: rgba(28, 35, 38, 0.5);
   padding: 2rem;
   border-radius: 0.8rem;
@@ -273,6 +273,26 @@ body.is-dark-theme .statsbox-label {
   border-radius: 0.8rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  #user-profile-basic-info, .stats-info-section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  div.user-profile-container > div.wrapper > div#today_statsInfoSection {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #today_statsInfoSection {
+    margin: 0 1rem 0 1rem;
+  }
+}
 .typingtest-container {
   font-family: "Ruda", sans-serif;
   display: flex;

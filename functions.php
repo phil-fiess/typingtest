@@ -153,7 +153,7 @@ function typingtest_render_tool_shortcode() {
                         <p class="output-profile" id="subscription-info"></h4>
                     </div>
                 </div>
-                <div class="stats-info-section today-stats-info-section">
+                <div class="stats-info-section today-stats-info-section" id="today_statsInfoSection">
                     <h2 class="heading-profile-stats stats-title">Today\'s Statistics</h2>
                     <div class="wrapper-stats">
                         <h4 class="label-stats stats-header">Total Lessons </h4>
