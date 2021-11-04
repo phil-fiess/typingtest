@@ -275,6 +275,9 @@ body.is-dark-theme .statsbox-label {
   padding: 2rem;
   border-radius: 0.8rem;
 }
+#user-profile-container .graph-div-wrapper {
+  margin: 3rem 0 3rem 0;
+}
 
 @media screen and (max-width: 1024px) {
   .wrapper {

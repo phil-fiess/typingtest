@@ -182,11 +182,11 @@ function typingtest_render_tool_shortcode() {
             </div>
 
             <div id="graphs-section">
-                <div id="relative-speed">
-                    <canvas id="relative-speed-chart" width="800" height="800"></canvas>
+                <div class="graph-div-wrapper" id="relative-speed">
+                    <canvas class="graph-canvas" id="relative-speed-chart" width="600" height="600"></canvas>
                 </div>
-                <div id="speed-per-competency">
-                    <canvas id="speed-per-competency-chart" width="900" height="700"></canvas>
+                <div class="graph-div-wrapper" id="speed-per-competency">
+                    <canvas class="graph-canvas" id="speed-per-competency-chart" width="600" height="600"></canvas>
                 </div>
             </div>
             <div class="wrapper-buttons">
