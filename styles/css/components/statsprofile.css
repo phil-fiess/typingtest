@@ -1,4 +1,11 @@
 #user-profile-container {
+  font-family: "Ruda", sans-serif;
+}
+#user-profile-container h1, #user-profile-container h2, #user-profile-container h3, #user-profile-container h4, #user-profile-container h5, #user-profile-container h6 {
+  font-family: "Ruda", sans-serif;
+}
+
+#user-profile-container {
   max-width: 65%;
 }
 #user-profile-container h2 {

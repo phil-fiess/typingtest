@@ -1,6 +1,13 @@
 @use '../colours.scss' as colours;
 @use '../mixins.scss' as mixins;
 
+#user-profile-container {
+    font-family: 'Ruda', sans-serif;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Ruda', sans-serif;
+    }
+}
+
 
 #user-profile-container {
     max-width: 65%;

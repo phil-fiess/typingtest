@@ -95,6 +95,7 @@ jQuery(document).ready(function($){
         quoteSpanArray = $('.char-input');
         quoteSpanArray.each(function(index) {
             let typedChar = curr_input_array[index];
+
         
             // character not currently typed
             if (typedChar == null) {
@@ -158,7 +159,7 @@ jQuery(document).ready(function($){
         $('.profile-button').prop('disabled', false);
        
         input_area.val("");
-        quote_text.text('Click on the area below to start the game.');
+        // quote_text.text('Click on the area below to start the game.');
         accuracy_text.text(100);
         timer_text.text(timeLeft + 's');
         timerbar_progress.css("width", "100%");
@@ -196,7 +197,7 @@ jQuery(document).ready(function($){
         // $('.profile-button').prop('disabled', true);
 
         //show finishing message
-        quote_text.text("Click on restart to start a new practise session.");
+        quote_text.text("Click the Restart button to begin the exercise again.");
 
         //display restart button by changing Start button
         start_button.html("Restart")

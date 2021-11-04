@@ -128,7 +128,7 @@ function typingtest_render_tool_shortcode() {
                 </div>
                 <div id="lessontext-wrapper">
                     <div class="lesson-text" id="lesson-content" spellcheck="false">
-                        Select a section and difficulty level, then hit start to begin the exercise.
+                        <span>Select a Compentency Section and Difficulty Level, then click the Start button.</span>
                     </div>
                     <textarea class="lesson-text" id="lesson-input" spellcheck="false"></textarea>
                 </div>
@@ -199,15 +199,19 @@ function typingtest_render_tool_shortcode() {
 
 
             <div class="help-modal modal" id="help_modalPopup">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo metus, blandit nec rutrum ut, condimentum sed nulla. Nunc eleifend enim a venenatis lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eros. Fusce aliquet vulputate enim at ultricies. Nullam faucibus magna non tortor vehicula lacinia. Quisque vulputate iaculis diam, vitae gravida neque efficitur varius. Praesent sed justo vel lorem varius semper non sit amet enim. Ut sit amet odio feugiat, lacinia ipsum nec, varius odio. Ut mollis magna nec ligula tempus ultricies.
-
-            Mauris dapibus nunc id mollis malesuada. Praesent nunc dolor, vulputate at malesuada at, sollicitudin sed sapien. Donec mattis magna est, eu efficitur ligula sollicitudin a. Aliquam facilisis est vel urna semper finibus. Pellentesque euismod, augue vitae mollis imperdiet, dui nisl condimentum odio, in rhoncus nibh ipsum eu purus. Nulla laoreet fermentum libero sit amet pulvinar. Sed facilisis dolor nec rhoncus faucibus. Duis nec sem vitae eros laoreet facilisis. Proin cursus tellus vehicula, mattis dolor vitae, tempus nisi. Suspendisse ullamcorper congue est, eget rhoncus enim cursus in. Nunc in bibendum dui, ut iaculis mi. Aliquam in vehicula ligula. Aliquam et neque aliquam, efficitur erat ac, dapibus massa.
-            
-            Donec commodo nisl vel ex rhoncus suscipit. Donec vehicula diam quis lorem suscipit lobortis. Praesent nec congue tellus. Nulla ut erat egestas, fermentum purus id, commodo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed cursus nibh nisl, id luctus nunc eleifend in. Sed placerat, odio quis sollicitudin varius, massa felis consequat justo, ut pulvinar velit arcu non nibh. Sed vehicula semper quam, vel aliquam turpis. Pellentesque pharetra luctus massa, quis dignissim nisl pulvinar vestibulum. In id magna in metus dignissim tristique. Sed mi lorem, sollicitudin id tortor vel, pharetra mattis purus. Curabitur convallis ligula velit, eget semper libero cursus in. Pellentesque vestibulum laoreet porttitor.
-            
-            Aliquam sodales mi orci, in pretium augue feugiat sed. In lobortis erat est, sit amet gravida felis dictum et. Cras non erat sed nunc laoreet viverra. Etiam finibus, urna eget fringilla hendrerit, enim tortor tempor lorem, ut tincidunt elit sem quis ex. Fusce cursus dictum nunc, ac posuere arcu aliquam quis. Ut quis nibh id dui suscipit viverra sed vitae lectus. Sed consectetur id erat a placerat. Sed eget pretium mauris, ut eleifend ipsum. Morbi et metus sagittis, placerat nisl non, vestibulum augue. Quisque ut accumsan elit, sed efficitur justo. Quisque suscipit, est vitae rutrum tristique, erat sem tincidunt dui, in aliquet risus sapien ac elit.
-            
-            Aliquam efficitur quam tellus, eget maximus mi interdum sit amet. Vestibulum mi nisi, mollis ut lectus et, ultrices molestie ex. Fusce ultricies tempor mi in ullamcorper. Vivamus ante sem, pharetra in odio vel, egestas eleifend massa. Etiam convallis felis a tortor finibus malesuada. Aliquam ut dictum lectus. Donec bibendum, mi sit amet posuere accumsan, erat leo bibendum ex, eget euismod nunc neque eu arcu.</p>
+                <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
             </div>
 
         </div>

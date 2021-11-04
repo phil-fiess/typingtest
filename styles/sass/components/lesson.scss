@@ -2,11 +2,17 @@
 @use '../mixins.scss' as mixins;
 
 
+.typingtest-container {
+    font-family: 'Ruda', sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 65% !important;
+}
+
 .lesson-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-    margin: 0 0 0 2rem;
   
     .typingtest-statsbar {
         display: flex;
@@ -54,6 +60,7 @@
         border-radius: 0.8rem;
         top: 0;
         left: 0;
+        overflow: hidden;
     }
   
     #lesson-content {
@@ -91,16 +98,19 @@ body.is-dark-theme .statsbox-label {
 }
    
 .char-input {
-    color: colours.$turquoiseblue;
+    color: darken(colours.$turquoiseblue, 5%);
+    font-weight: bold;
 }
     
 .incorrect-char {
     color: colours.$darkred;
+    font-weight: bold;
     // text-decoration: underline;
 }
     
 .correct-char {
     color: colours.$black;
+    font-weight: bold;
 }
 
 #user-profile-container {
@@ -112,5 +122,20 @@ body.is-dark-theme .statsbox-label {
 
     .typingtest-container {
         flex-direction: column;
+    }
+
+    .lesson-wrapper {
+        margin: 0 0 0 0;
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .typingtest-container {
+        flex-direction: row;
+    }
+
+    .lesson-wrapper {
+        margin: 0 0 0 6rem;
     }
 }

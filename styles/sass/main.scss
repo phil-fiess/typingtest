@@ -15,17 +15,3 @@
 //   font-family: "Ruda";
 //   src: url('../../fonts/Ruda/Ruda-VariableFont_wght.ttf') format('truetype');
 // }
-
-.typingtest-container {
-  font-family: 'Ruda', sans-serif;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
-#user-profile-container {
-  font-family: 'Ruda', sans-serif;
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ruda', sans-serif;
-  }
-}

@@ -1,8 +1,14 @@
+.typingtest-container {
+  font-family: "Ruda", sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 65% !important;
+}
+
 .lesson-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0 0 0 2rem;
 }
 .lesson-wrapper .typingtest-statsbar {
   display: flex;
@@ -43,6 +49,7 @@
   border-radius: 0.8rem;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .lesson-wrapper #lesson-content {
   background-color: rgba(2, 159, 178, 0.5);
@@ -74,15 +81,18 @@ body.is-dark-theme .statsbox-label {
 }
 
 .char-input {
-  color: #029fb2;
+  color: #028899;
+  font-weight: bold;
 }
 
 .incorrect-char {
   color: #941f16;
+  font-weight: bold;
 }
 
 .correct-char {
   color: #000000;
+  font-weight: bold;
 }
 
 #user-profile-container {
@@ -92,6 +102,19 @@ body.is-dark-theme .statsbox-label {
 @media screen and (max-width: 768px) {
   .typingtest-container {
     flex-direction: column;
+  }
+
+  .lesson-wrapper {
+    margin: 0 0 0 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .typingtest-container {
+    flex-direction: row;
+  }
+
+  .lesson-wrapper {
+    margin: 0 0 0 6rem;
   }
 }
 
