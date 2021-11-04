@@ -27,7 +27,7 @@
         z-index: 3;
         top: 0;
         width: 100%;
-        color: colours.$turquoiseblue;
+        color: lighten(colours.$turquoiseblue, 10%);
         display: flex;
         justify-content: center;
     }

@@ -122,10 +122,12 @@ function typingtest_render_tool_shortcode() {
                         <div id="timerbar-text"></div>
                     </div>
                 </div>
-                <div class="lesson-content" spellcheck="false">
-                    Select a section and difficulty level, then hit start to begin the exercise.
+                <div id="lessontext-wrapper">
+                    <div class="lesson-text" id="lesson-content" spellcheck="false">
+                        Select a section and difficulty level, then hit start to begin the exercise.
+                    </div>
+                    <textarea class="lesson-text" id="lesson-input" spellcheck="false"></textarea>
                 </div>
-                <textarea class="input-area" spellcheck="false"></textarea>
             </div>
         </div>
 

@@ -20,8 +20,8 @@ jQuery(document).ready(function($){
     let accuracy_text = $('#current-accuracy');
     let error_text = $('#current-errors');
     let wpm_text = $('#current-wpm');
-    let quote_text = $('.lesson-content');
-    let input_area = $('.input-area');
+    let quote_text = $('#lesson-content');
+    let input_area = $('#lesson-input');
     let wpm_group = $('#wpm');
     let errors_group = $('#errors');
     let accuracy_group = $('#accuracy');
@@ -35,9 +35,9 @@ jQuery(document).ready(function($){
     let accuracy = 0;
     let characterTyped = 0;
     let current_quote = "";
-    let quoteNo = 0;
     let timer = null;
-    
+
+
     //this will have to be re-worked to interact with the DB
     //on user selection of lessons
     function updateQuote() {
@@ -237,8 +237,7 @@ jQuery(document).ready(function($){
 
     //This handles the elements in the tool starting the game
     $('.start-button').on('click', startGame);
-    $('.input-area').on('input', processCurrentText);
-    $('.restart-button').on('click', resetValues);
+    $('#lesson-input').on('input', processCurrentText);
 
 
     /**

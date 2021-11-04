@@ -52,9 +52,8 @@
 }
 
 
-// .competency-selector-label, .level-selector-label {
-//   margin-top: 0.5rem;
-// }
+
+
 
 .lesson-wrapper {
   position: relative;
@@ -71,19 +70,21 @@
       height: 7rem;
       width: 8rem;
       padding: 1rem;
-      border-radius: 10px;
+      border-radius: 0.8rem;
       margin: 1rem 0 1rem 0;
     }
 
     .statsbox-label {
       text-transform: uppercase;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       font-weight: 600;
+      color: lighten(colours.$darkbluegrey, 15%);
     }
 
     .statsbox-current {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       width: 100px;
+      color: colours.$darkbluegrey;
     }
 
     #errors {
@@ -92,38 +93,46 @@
     }
   }
 
-  .lesson-content {
-    width: inherit;
-    height: inherit;
+  #lessontext-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(colours.$black, 0%);
   }
 
-  .input-area {
-    background-color: transparent;
+  .lesson-text {
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    top: 0;
+    left: 0;
+  }
+
+  #lesson-content {
+    background-color: rgba(colours.$turquoiseblue, 50%);
+    z-index: 10;
+  }
+
+  #lesson-input {
+    background-color: rgba(colours.$darkred, 0%);
+    color: transparent;
+    resize: none;
+    border: none;
+    z-index: 20;
+    margin: 0;
     position: absolute;
     top: 0;
     left: 0;
-    resize: none;
-    font-size: 1.5rem;
-    border: none;
-    width: inherit;
     height: inherit;
-  }
-  div.typingtest-container > div.lesson-wrapper > .input-area {
-    padding: 1.5rem;
-    margin: 0;
-    border: 0;
-    color: transparent;
+    width: inherit;
   }
 }
 
 
-    
-  
-    
-  .lesson-content {
-    background-color: rgba(colours.$turquoiseblue, 50%);
-    font-size: 1.5rem;
-  }
+
+
+
+
     
   .char-input {
     color: colours.$turquoiseblue;
