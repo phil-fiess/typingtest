@@ -69,13 +69,16 @@ body.is-dark-theme .statsbox-label {
   color: black;
 }
 
+.char-cursor {
+  background-color: white;
+}
+
 .char-input {
   color: #029fb2;
 }
 
 .incorrect-char {
   color: #941f16;
-  text-decoration: underline;
 }
 
 .correct-char {

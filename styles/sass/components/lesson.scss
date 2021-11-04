@@ -85,14 +85,18 @@ body.is-dark-theme .statsbox-label {
     color: darken(colours.$lightgrey, 45%);
 }
 
-      
+
+.char-cursor {
+    background-color: white;
+}
+   
 .char-input {
     color: colours.$turquoiseblue;
 }
     
 .incorrect-char {
     color: colours.$darkred;
-    text-decoration: underline;
+    // text-decoration: underline;
 }
     
 .correct-char {

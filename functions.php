@@ -10,6 +10,9 @@ function add_scripts_and_styles() {
     wp_enqueue_script('typingtest-charts.js', plugins_url('/js/typingtest-charts.js', __FILE__), array('jquery', 'json2'));
     wp_localize_script('typingtest-charts.js', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 
+    wp_enqueue_script('bootstrap.min.js', plugins_url('node_modules/bootstrap/dist/js/bootstrap.min.js', __FILE__));
+    wp_enqueue_style('bootstrap.min.css', plugins_url('node_modules/bootstrap/dist/css/bootstrap.min.css', __FILE__));
+
 }
 add_action('init', 'add_scripts_and_styles');
 
@@ -191,7 +194,20 @@ function typingtest_render_tool_shortcode() {
             </div>
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
-                <button class="button help-button">Help</button>
+                <button class="button help-button" data-bs-toggle="modal" data-bs-target="#help_modalPopup">Help</button>
+            </div>
+
+
+            <div class="help-modal modal" id="help_modalPopup">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque justo metus, blandit nec rutrum ut, condimentum sed nulla. Nunc eleifend enim a venenatis lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel elit eros. Fusce aliquet vulputate enim at ultricies. Nullam faucibus magna non tortor vehicula lacinia. Quisque vulputate iaculis diam, vitae gravida neque efficitur varius. Praesent sed justo vel lorem varius semper non sit amet enim. Ut sit amet odio feugiat, lacinia ipsum nec, varius odio. Ut mollis magna nec ligula tempus ultricies.
+
+            Mauris dapibus nunc id mollis malesuada. Praesent nunc dolor, vulputate at malesuada at, sollicitudin sed sapien. Donec mattis magna est, eu efficitur ligula sollicitudin a. Aliquam facilisis est vel urna semper finibus. Pellentesque euismod, augue vitae mollis imperdiet, dui nisl condimentum odio, in rhoncus nibh ipsum eu purus. Nulla laoreet fermentum libero sit amet pulvinar. Sed facilisis dolor nec rhoncus faucibus. Duis nec sem vitae eros laoreet facilisis. Proin cursus tellus vehicula, mattis dolor vitae, tempus nisi. Suspendisse ullamcorper congue est, eget rhoncus enim cursus in. Nunc in bibendum dui, ut iaculis mi. Aliquam in vehicula ligula. Aliquam et neque aliquam, efficitur erat ac, dapibus massa.
+            
+            Donec commodo nisl vel ex rhoncus suscipit. Donec vehicula diam quis lorem suscipit lobortis. Praesent nec congue tellus. Nulla ut erat egestas, fermentum purus id, commodo felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed cursus nibh nisl, id luctus nunc eleifend in. Sed placerat, odio quis sollicitudin varius, massa felis consequat justo, ut pulvinar velit arcu non nibh. Sed vehicula semper quam, vel aliquam turpis. Pellentesque pharetra luctus massa, quis dignissim nisl pulvinar vestibulum. In id magna in metus dignissim tristique. Sed mi lorem, sollicitudin id tortor vel, pharetra mattis purus. Curabitur convallis ligula velit, eget semper libero cursus in. Pellentesque vestibulum laoreet porttitor.
+            
+            Aliquam sodales mi orci, in pretium augue feugiat sed. In lobortis erat est, sit amet gravida felis dictum et. Cras non erat sed nunc laoreet viverra. Etiam finibus, urna eget fringilla hendrerit, enim tortor tempor lorem, ut tincidunt elit sem quis ex. Fusce cursus dictum nunc, ac posuere arcu aliquam quis. Ut quis nibh id dui suscipit viverra sed vitae lectus. Sed consectetur id erat a placerat. Sed eget pretium mauris, ut eleifend ipsum. Morbi et metus sagittis, placerat nisl non, vestibulum augue. Quisque ut accumsan elit, sed efficitur justo. Quisque suscipit, est vitae rutrum tristique, erat sem tincidunt dui, in aliquet risus sapien ac elit.
+            
+            Aliquam efficitur quam tellus, eget maximus mi interdum sit amet. Vestibulum mi nisi, mollis ut lectus et, ultrices molestie ex. Fusce ultricies tempor mi in ullamcorper. Vivamus ante sem, pharetra in odio vel, egestas eleifend massa. Etiam convallis felis a tortor finibus malesuada. Aliquam ut dictum lectus. Donec bibendum, mi sit amet posuere accumsan, erat leo bibendum ex, eget euismod nunc neque eu arcu.</p>
             </div>
 
         </div>

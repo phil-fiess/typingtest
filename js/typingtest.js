@@ -9,7 +9,7 @@
 
 
 jQuery(document).ready(function($){
-    let TIME_LIMIT = 15;
+    let TIME_LIMIT = 90;
 
     let current_lesson = "";
 
@@ -94,25 +94,24 @@ jQuery(document).ready(function($){
        
         quoteSpanArray = $('.char-input');
         quoteSpanArray.each(function(index) {
-          let typedChar = curr_input_array[index];
-          // character not currently typed
-          if (typedChar == null) {
-            $(this).removeClass('correct-char');
-            $(this).removeClass('incorrect-char');
-       
+            let typedChar = curr_input_array[index];
+        
+            // character not currently typed
+            if (typedChar == null) {
+                $(this).removeClass('correct-char');
+                $(this).removeClass('incorrect-char');
+            } 
             // correct character
-          } else if (typedChar == $(this).text()) {
-            $(this).addClass('correct-char');
-            $(this).removeClass('incorrect-char');
-       
+            else if (typedChar == $(this).text()) {
+                $(this).addClass('correct-char');
+                $(this).removeClass('incorrect-char');
+            } 
             // incorrect character
-          } else {
-            $(this).addClass('incorrect-char');
-            $(this).removeClass('correct-char');
-       
-            // increment number of errors
-            errors++;
-          }
+            else {
+                $(this).addClass('incorrect-char');
+                $(this).removeClass('correct-char');
+                errors++; // increment number of errors
+            }
         });
        
         // display the number of errors
