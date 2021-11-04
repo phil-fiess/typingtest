@@ -228,6 +228,9 @@ body.is-dark-theme .statsbox-label {
 #user-profile-container .wrapper-buttons:first-child {
   margin-bottom: 2rem;
 }
+#user-profile-container .wrapper-buttons:last-child {
+  margin-top: 3rem;
+}
 #user-profile-container .wrapper {
   display: flex;
   justify-content: space-between;
