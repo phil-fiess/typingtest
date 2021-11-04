@@ -423,20 +423,68 @@ function typingtest_retrieve_profile() {
 
         // calculate average speeds for each values
         //speed for user for relative charts
-        $user_financial_reporting_speed /= $user_total_financial_reporting_games;
-        $user_taxation_speed /= $user_total_taxation_games;
-        $user_management_accounting_speed /= $user_total_management_accounting_games;
-        $user_assurance_speed /= $user_total_assurance_games;
-        $user_finance_speed /= $user_total_finance_games;
-        $user_strategy_and_governance_speed /= $user_total_strategy_and_governance_games;
+        if ($user_total_financial_reporting_games != 0) {
+            $user_financial_reporting_speed /= $user_total_financial_reporting_games;
+        } else {
+            $user_financial_reporting_speed = 0;
+        }
+        if ($user_total_taxation_games != 0) {
+            $user_taxation_speed /= $user_total_taxation_games;
+        } else {
+            $user_taxation_speed = 0;
+        }
+        if ($user_total_management_accounting_games != 0) {
+            $user_management_accounting_speed /= $user_total_management_accounting_games;
+        } else {
+            $user_management_accounting_speed = 0;
+        }
+        if ($user_total_assurance_games != 0) {
+            $user_assurance_speed /= $user_total_assurance_games;
+        } else {
+            $user_assurance_speed = 0;
+        }
+        if ($user_total_finance_games != 0) {
+            $user_finance_speed /= $user_total_finance_games;
+        } else {
+            $user_finance_speed = 0;
+        }
+        if ($user_total_strategy_and_governance_games != 0) {
+            $user_strategy_and_governance_speed /= $user_total_strategy_and_governance_games;
+        } else {
+            $user_strategy_and_governance_speed = 0;
+        }
 
         //speed for class for relative charts
-        $class_financial_reporting_speed /= $total_financial_reporting_games;
-        $class_taxation_speed /= $total_taxation_games;
-        $class_management_accounting_speed /= $total_management_accounting_games;
-        $class_assurance_speed /= $total_assurance_games;
-        $class_finance_speed /= $total_finance_games;
-        $class_strategy_and_governance_speed /= $total_strategy_and_governance_games;
+        if ($total_financial_reporting_games != 0) {
+            $class_financial_reporting_speed /= $total_financial_reporting_games;
+        } else {
+            $class_financial_reporting_speed = 0;
+        }
+        if ($total_taxation_games != 0) {
+            $class_taxation_speed /= $total_taxation_games;            
+        } else {
+            $class_taxation_speed = 0;
+        }
+        if ($total_management_accounting_games != 0) {
+            $class_management_accounting_speed /= $total_management_accounting_games;            
+        } else {
+            $class_management_accounting_speed = 0;
+        }
+        if ($total_assurance_games != 0) {
+            $class_assurance_speed /= $total_assurance_games;
+        } else {
+            $class_assurance_speed = 0;
+        }
+        if ($total_finance_games != 0) {
+            $class_finance_speed /= $total_finance_games;
+        } else {
+            $class_finance_speed = 0;
+        }
+        if ($total_strategy_and_governance_games != 0) {
+            $class_strategy_and_governance_speed /= $total_strategy_and_governance_games;
+        } else {
+            $class_strategy_and_governance_speed = 0;
+        }
 
         //average speeds for top bar charts
         $user_average_speed_alltime /= count($results);
