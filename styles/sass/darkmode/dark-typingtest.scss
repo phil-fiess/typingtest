@@ -1,2 +1,51 @@
 @use '../colours.scss' as colours;
 @use '../mixins.scss' as mixins;
+
+
+#pf-typingTest__container.pf-darkmode {
+    background-color: colours.$verydarkgrey;
+    border-radius: 0.8rem;
+    padding: 5rem;
+
+    div.lesson-selector {
+        
+        label.selector-label {
+            color: rgba(colours.$white, 70%);
+        }
+
+        button {
+            color: transparentize(colours.$white, 0.1) !important;
+        }
+    }
+
+
+    div.lesson-wrapper {
+
+        div.lesson-text {
+            background-color: colours.$turquoiseblue;
+            color: colours.$white;
+            
+            .char-input {
+                color: rgba(colours.$white, 70%);
+            }
+        }
+
+        div.statsbox-label {
+            color: rgba(colours.$white, 70%);
+        }
+    
+    
+    
+    
+        #pf-timerBar__wrapper {
+    
+            #pf-timerBar__progress {
+                background-color: colours.$darkgrey;
+            }
+    
+            #pf-timerBar__text {
+                color: rgba(colours.$white, 60%);
+            }
+        }
+    }
+}

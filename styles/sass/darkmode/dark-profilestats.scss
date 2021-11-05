@@ -1,2 +1,9 @@
 @use '../colours.scss' as colours;
 @use '../mixins.scss' as mixins;
+
+
+#user-profile-container.pf-darkmode {
+    background-color: colours.$verydarkgrey;
+    border-radius: 0.8rem;
+    padding: 5rem;
+}

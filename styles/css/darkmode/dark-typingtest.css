@@ -1,3 +1,29 @@
-
+#pf-typingTest__container.pf-darkmode {
+  background-color: #212529;
+  border-radius: 0.8rem;
+  padding: 5rem;
+}
+#pf-typingTest__container.pf-darkmode div.lesson-selector label.selector-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+#pf-typingTest__container.pf-darkmode div.lesson-selector button {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+#pf-typingTest__container.pf-darkmode div.lesson-wrapper div.lesson-text {
+  background-color: #27b6d4;
+  color: #ffffff;
+}
+#pf-typingTest__container.pf-darkmode div.lesson-wrapper div.lesson-text .char-input {
+  color: rgba(255, 255, 255, 0.7);
+}
+#pf-typingTest__container.pf-darkmode div.lesson-wrapper div.statsbox-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+#pf-typingTest__container.pf-darkmode div.lesson-wrapper #pf-timerBar__wrapper #pf-timerBar__progress {
+  background-color: #3d3d3d;
+}
+#pf-typingTest__container.pf-darkmode div.lesson-wrapper #pf-timerBar__wrapper #pf-timerBar__text {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 /*# sourceMappingURL=dark-typingtest.css.map */
