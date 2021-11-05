@@ -9,6 +9,9 @@
 .modal-content ul li {
   font-family: "Ruda", sans-serif;
 }
+.modal-content button {
+  font-family: "Ruda", sans-serif !important;
+}
 
 .modal-title {
   text-transform: uppercase;
@@ -42,6 +45,7 @@
 
 #button_startingExercise, #button_accessStats {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
 }
 #button_startingExercise:focus, #button_accessStats:focus {
   outline: none;
@@ -49,6 +53,15 @@
 
 .help-modal-email {
   margin-top: 3rem;
+}
+
+button.modal-button-close {
+  background-color: white !important;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between !important;
 }
 
 /*# sourceMappingURL=helpmodal.css.map */

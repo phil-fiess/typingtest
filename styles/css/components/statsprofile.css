@@ -47,6 +47,7 @@
 }
 #user-profile-container .button {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
 }
 #user-profile-container .button:focus {
   outline: none;

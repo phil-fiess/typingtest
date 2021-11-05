@@ -43,6 +43,7 @@
 }
 .lesson-selector .buttons-wrapper .button {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
   margin: 0.5rem;
 }
 .lesson-selector .buttons-wrapper .button:focus {

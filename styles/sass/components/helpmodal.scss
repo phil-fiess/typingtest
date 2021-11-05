@@ -12,6 +12,10 @@
     ul li {
         font-family: 'Ruda', sans-serif;
     }
+
+    button {
+        font-family: 'Ruda', sans-serif !important;
+    }
 }
 
 .modal-title {
@@ -52,4 +56,14 @@
 
 .help-modal-email {
     margin-top: 3rem;
+}
+
+
+button.modal-button-close {
+    background-color: white !important;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between !important;
 }

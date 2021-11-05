@@ -68,7 +68,7 @@ function typingtest_render_tool_shortcode() {
                     <div class="modal-content">
                         <div class="modal-header">
                             <p class="modal-title">Instructions</p>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close modal-button-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
 
@@ -107,10 +107,9 @@ function typingtest_render_tool_shortcode() {
                                             <li><b>Average Typing Speed:</b> This bar chart shows your average typing speed per competency area.</li>
                                         </ul>
                                 </div>
-                            <p class="help-modal-email">If you have any questions, concerns or problems, please reach out for help: <b>support@gevorgcpa.com</b><p>
-
                         </div>
                         <div class="modal-footer">
+                            <p class="help-modal-email">If you have any questions, concerns or problems, please reach out for help: <b>support@gevorgcpa.com</b><p>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>

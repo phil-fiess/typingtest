@@ -255,6 +255,7 @@ body.is-dark-theme .statsbox-label {
 }
 .lesson-selector .buttons-wrapper .button {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
   margin: 0.5rem;
 }
 .lesson-selector .buttons-wrapper .button:focus {
@@ -310,6 +311,7 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .button {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
 }
 #user-profile-container .button:focus {
   outline: none;
@@ -359,6 +361,9 @@ body.is-dark-theme .statsbox-label {
 .modal-content ul li {
   font-family: "Ruda", sans-serif;
 }
+.modal-content button {
+  font-family: "Ruda", sans-serif !important;
+}
 
 .modal-title {
   text-transform: uppercase;
@@ -392,6 +397,7 @@ body.is-dark-theme .statsbox-label {
 
 #button_startingExercise, #button_accessStats {
   border-radius: 0.8rem;
+  font-family: "Ruda", sans-serif;
 }
 #button_startingExercise:focus, #button_accessStats:focus {
   outline: none;
@@ -399,6 +405,15 @@ body.is-dark-theme .statsbox-label {
 
 .help-modal-email {
   margin-top: 3rem;
+}
+
+button.modal-button-close {
+  background-color: white !important;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between !important;
 }
 
 /*# sourceMappingURL=main.css.map */
