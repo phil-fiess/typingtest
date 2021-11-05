@@ -354,70 +354,58 @@ body.is-dark-theme .statsbox-label {
     margin: 0 1rem 0 1rem;
   }
 }
-.modal-dialog {
-  margin: 3rem auto !important;
-  max-width: 80vw !important;
-}
-
-.modal-content {
+#pf-helpModal__container {
   font-family: "Ruda", sans-serif;
 }
-.modal-content ul li {
-  font-family: "Ruda", sans-serif;
+#pf-helpModal__container .modal-dialog {
+  margin: 7.2rem auto;
+  max-width: 80vw;
 }
-.modal-content button {
-  font-family: "Ruda", sans-serif !important;
-}
-
-.modal-title {
+#pf-helpModal__container .modal-title {
   text-transform: uppercase;
   font-weight: bold;
 }
-
-.help-modal-heading {
-  font-weight: bold;
-  opacity: 0.7;
-  font-size: larger;
-  margin-bottom: 0.75rem;
-}
-
-.help-modal-detail {
-  font-size: small;
-}
-
-.help-modal-paragraph {
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.modal-body {
+#pf-helpModal__container .modal-body {
   display: flex;
   flex-direction: column;
 }
-.modal-body .button {
+#pf-helpModal__container .modal-body button {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-size: larger;
+}
+#pf-helpModal__container .pf-helpModal__paragraph {
+  font-size: larger;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+#pf-helpModal__container .pf-helpModal__detail, #pf-helpModal__container .pf-helpModal__detail--list {
+  font-size: small;
+  margin-bottom: 0;
+  margin-left: 1.5rem;
+}
+#pf-helpModal__container .pf-helpModal__detail--list {
+  margin-left: 3rem;
+}
+#pf-helpModal__container mark {
+  background-color: rgba(2, 159, 178, 0.2);
+  border-radius: 0.5rem;
+}
+#pf-helpModal__container .modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+#pf-helpModal__container .modal-footer #pf-helpModal__button--close {
+  font-family: "Ruda", sans-serif;
+  font-size: larger;
 }
 
-#button_startingExercise, #button_accessStats {
+.pf-button--rounded {
   border-radius: 0.8rem;
   font-family: "Ruda", sans-serif;
 }
-#button_startingExercise:focus, #button_accessStats:focus {
+.pf-button--rounded:focus {
   outline: none;
-}
-
-.help-modal-email {
-  margin-top: 3rem;
-}
-
-button.modal-button-close {
-  background-color: white !important;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: space-between !important;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -16,3 +16,7 @@
 //   font-family: "Ruda";
 //   src: url('../../fonts/Ruda/Ruda-VariableFont_wght.ttf') format('truetype');
 // }
+
+.pf-button--rounded {
+    @include mixins.rounded-button();
+}
