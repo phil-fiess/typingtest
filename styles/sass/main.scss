@@ -6,6 +6,9 @@
 @use 'components/lessonselector.scss';
 @use 'components/statsprofile.scss';
 @use 'components/helpmodal.scss';
+@use 'darkmode/dark-helpmodal.scss';
+@use 'darkmode/dark-profilestats.scss';
+@use 'darkmode/dark-typingtest.scss';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap');

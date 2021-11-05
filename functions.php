@@ -62,7 +62,7 @@ add_action('wp_ajax_nopriv_typingtest_display_admin_lesson', 'typingtest_display
 /**Typing Test Tool Shortcode. This renders the UI for the typing test. Just place it on a page and you're set. */
 function typingtest_render_tool_shortcode() { 
     return '
-        <div class="pf-container container-fluid" id="pf-helpModal__container"> 
+        <div class="pf-container pf-darkmode container-fluid" id="pf-helpModal__container"> 
             <div class="modal" id="pf-helpModal__wrapper" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -173,10 +173,10 @@ function typingtest_render_tool_shortcode() {
                         <div class="statsbox-current" id="current-accuracy">--</div>
                     </div>
                 </div>
-                <div class="timer-bar">
-                    <div id="timerbar-base">
-                        <div id="timerbar-progress"></div>
-                        <div id="timerbar-text"></div>
+                <div class="pf-timerbar" id="pf-timerBar__wrapper">
+                    <div class="pf-timerbar" id="pf-timerBar__base">
+                        <div class="pf-timerbar" id="pf-timerBar__progress"></div>
+                        <div class="pf-timerbar" id="pf-timerBar__text"></div>
                     </div>
                 </div>
                 <div id="lessontext-wrapper">

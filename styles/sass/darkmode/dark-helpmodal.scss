@@ -1,0 +1,17 @@
+@use '../colours.scss' as colours;
+@use '../mixins.scss' as mixins;
+
+
+#pf-helpModal__container.pf-darkmode {
+    div.modal-content {
+        background-color: colours.$darkgrey;
+    }
+
+    button.btn-close#pf-helpModal__button--x {
+        background-color: colours.$white;
+    }
+
+    p, ul li, mark {
+        color: rgba(colours.$white, 80%);
+    }
+}

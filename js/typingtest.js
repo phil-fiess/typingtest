@@ -15,8 +15,8 @@ jQuery(document).ready(function($){
 
     //element selectors for game display
     let timer_text = $('.current-time');
-    let timerbar_progress = $('#timerbar-progress');
-    let timerbar_text = $('#timerbar-text').html(TIME_LIMIT + " seconds");
+    let timerbar_progress = $('#pf-timerBar__progress');
+    let timerbar_text = $('#pf-timerBar__text').html(TIME_LIMIT + " seconds");
     let accuracy_text = $('#current-accuracy');
     let error_text = $('#current-errors');
     let wpm_text = $('#current-wpm');

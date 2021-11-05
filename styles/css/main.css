@@ -46,36 +46,39 @@
 }
 
 /**END ADMIN SECTION **/
-.timer-bar {
+#pf-timerBar__wrapper {
   margin-bottom: 2rem;
 }
-.timer-bar #timerbar-base {
+#pf-timerBar__wrapper #pf-timerBar__base {
   background-color: #666666;
-  height: 2rem;
+  height: 3rem;
+  border-radius: 10rem;
   position: relative;
   z-index: 0;
-  border-radius: 1rem;
 }
-.timer-bar #timerbar-progress {
+#pf-timerBar__wrapper #pf-timerBar__progress {
   background-color: #000000;
   height: inherit;
+  border-radius: inherit;
+  width: 100%;
   position: absolute;
   z-index: 2;
   top: 0;
-  width: 100%;
-  border-radius: 1rem;
 }
-.timer-bar #timerbar-text {
+#pf-timerBar__wrapper #pf-timerBar__text {
+  height: inherit;
+  width: 100%;
   position: absolute;
   z-index: 3;
   top: 0;
-  width: 100%;
-  color: #03cce4;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: #03cce4;
+  font-size: larger;
 }
 
-.typingtest-container {
+#pf-typingTest__container {
   font-family: "Ruda", sans-serif;
   display: flex;
   flex-wrap: nowrap;
@@ -198,7 +201,8 @@ body.is-dark-theme .statsbox-label {
     flex-direction: row;
     margin-right: auto;
     margin-left: auto;
-    max-width: 65% !important;
+    max-width: 100%;
+    padding: 0;
   }
 
   .lesson-wrapper {
@@ -398,6 +402,16 @@ body.is-dark-theme .statsbox-label {
 #pf-helpModal__container .modal-footer #pf-helpModal__button--close {
   font-family: "Ruda", sans-serif;
   font-size: larger;
+}
+
+#pf-helpModal__container.pf-darkmode div.modal-content {
+  background-color: #212529;
+}
+#pf-helpModal__container.pf-darkmode button.btn-close#pf-helpModal__button--x {
+  background-color: #ffffff;
+}
+#pf-helpModal__container.pf-darkmode p, #pf-helpModal__container.pf-darkmode ul li, #pf-helpModal__container.pf-darkmode mark {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .pf-button--rounded {

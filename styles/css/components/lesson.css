@@ -1,4 +1,4 @@
-.typingtest-container {
+#pf-typingTest__container {
   font-family: "Ruda", sans-serif;
   display: flex;
   flex-wrap: nowrap;
@@ -121,7 +121,8 @@ body.is-dark-theme .statsbox-label {
     flex-direction: row;
     margin-right: auto;
     margin-left: auto;
-    max-width: 65% !important;
+    max-width: 100%;
+    padding: 0;
   }
 
   .lesson-wrapper {

@@ -1,36 +1,40 @@
 @use '../colours.scss' as colours;
 @use '../mixins.scss' as mixins;
 
-.timer-bar {
+
+#pf-timerBar__wrapper {
     margin-bottom: 2rem;
 
-
-    #timerbar-base {
+    #pf-timerBar__base {
         background-color: colours.$lightgrey;
-        height: 2rem;
+        height: 3rem;
+        border-radius: 10rem;
         position: relative;
         z-index: 0;
-        border-radius: 1rem;
+
     }
     
-    #timerbar-progress {
+    #pf-timerBar__progress {
         background-color: colours.$black;
         height: inherit;
+        border-radius: inherit;
+        width: 100%;
         position: absolute;
         z-index: 2;
         top: 0;
-        width: 100%;
-        border-radius: 1rem;
     }
 
-    #timerbar-text {
+    #pf-timerBar__text {
+        height: inherit;
+        width: 100%;
         position: absolute;
         z-index: 3;
         top: 0;
-        width: 100%;
-        color: lighten(colours.$turquoiseblue, 10%);
         display: flex;
         justify-content: center;
+        align-items: center;
+        color: lighten(colours.$turquoiseblue, 10%);
+        font-size: larger;
     }
 }
 
