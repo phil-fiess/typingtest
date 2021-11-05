@@ -9,7 +9,7 @@
   border-radius: 1rem;
 }
 .timer-bar #timerbar-progress {
-  background-color: #1c2326;
+  background-color: #000000;
   height: inherit;
   position: absolute;
   z-index: 2;

@@ -61,8 +61,64 @@ add_action('wp_ajax_nopriv_typingtest_display_admin_lesson', 'typingtest_display
 
 /**Typing Test Tool Shortcode. This renders the UI for the typing test. Just place it on a page and you're set. */
 function typingtest_render_tool_shortcode() { 
-    return 
-        '<div class="typingtest-container">
+    return '
+        <div class="modal-container"> 
+            <div class="help-modal modal" id="help_modalPopup" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Instructions</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <button class="button" id="button_startingExercise" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_startingExercise" aria-expanded="false" aria-controls="collapse_startingExercise">Starting An Exercise</button>
+
+                                <div class="collapse" id="collapse_startingExercise">
+                                    <p class="help-modal-paragraph"><b>Step 1:</b> Select a Competency Section from the drop-down box.</p>
+                                        <p class="help-modal-detail">The app will offer sentences related to the competency area chosen.</p>
+                                        <p class="help-modal-detail"><b>Example:</b> The Financial Reporting section will have related sentences from topics such as revenue recognition, leases, financial instruments, inventories, impairment, provision, contingent liability, etc.</p>
+                                        <p class="help-modal-detail"><b>Note:</b> If you are in Core 1, I recommend to choose mostly Financial Reporting; in Core 2, choose Management Accounting; in Elective Modules, choose the competency area that matches your module.</p>
+                                    <p class="help-modal-paragraph"><b>Step 2:</b> Select a Difficulty Level from the drop-down box.</p>
+                                        <p class="help-modal-detail">Available levels are 1-15, with 1 being the easiest and 15 being the most difficult. The the higher the chosen level, the more complex the sentences will be.</p>
+                                    <p class="help-modal-paragraph"><b>Step 3:</b> Click the Start button.</p>
+                                        <p class="help-modal-detail">As you\'re typing, the app will measure the following info:</p>
+                                        <ul class="help-modal-detail">
+                                            <li><b>Typing Speed:</b> measured as words-per-minute (WPM)</li>
+                                            <li><b>Time:</b> how many seconds spent until the exercise was completed</li>
+                                            <li><b>Errors:</b> the number of words mistyped</li>
+                                            <li><b>Accuracy:</b> the percentage of words typed accurately in comparison to the total words in the exercise</li>
+                                        </ul>
+                                    <p class="help-modal-paragraph"><b>Step 4:</b> Once the exercise is complete, your results will be displayed in the above boxes. You can re-start the lesson by clicking the Restart button</p>
+                                </div>
+
+                            <button class="button" id="button_accessStats" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_accessStats" aria-expanded="false" aria-controls="collapse_accessStats">Accessing User Stats</button>
+
+                                <div class="collapse" id="collapse_accessStats">
+                                    <p class="help-modal-paragraph">1. Your lesson statistics can be viewed by clicking the User Profile button</p>
+                                        <ul class="help-modal-detail">
+                                            <li><b>Total Statistics:</b> All statistics since account creation.</li>
+                                            <li><b>Today\'s Statistics:</b> The statistics since 12:00am local time</li>
+                                        </ul>
+
+                                    <p class="help-modal-paragraph">2. You can also view data charts and graphs below your statistics.</p>
+                                        <ul class="help-modal-detail">
+                                            <li><b>Relative Typing Speed:</b> This radar chart shows your stats compared with all other registered students. The highlighted areas are your WPM per each competency area. Lines closer to the outer edges represents a higher score. Lines closer to the centre represent a lower score.</li>
+                                            <li><b>Average Typing Speed:</b> This bar chart shows your average typing speed per competency area.</li>
+                                        </ul>
+                                </div>
+                            <p class="help-modal-email">If you have any questions, concerns or problems, please reach out for help: <b>support@gevorgcpa.com</b><p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="typingtest-container">
 
             <div class="lesson-selector">
                 <div class="selectors-wrapper">
@@ -101,7 +157,7 @@ function typingtest_render_tool_shortcode() {
                 <div class="buttons-wrapper">
                     <button class="button start-button">Start</button>
                     <button class="button profile-button">User Profile</button>
-                    <button class="button help-button">Help</button>
+                    <button class="button help-button" data-bs-toggle="modal" data-bs-target="#help_modalPopup">Help</button>
                 </div>
             </div>
 
@@ -141,7 +197,7 @@ function typingtest_render_tool_shortcode() {
 
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
-                <button class="button help-button">Help</button>
+                <button class="button help-button" data-bs-toggle="modal" data-bs-target="#help_modalPopup">Help</button>
             </div>  
 
             <div class="wrapper">
@@ -198,21 +254,7 @@ function typingtest_render_tool_shortcode() {
             </div>
 
 
-            <div class="help-modal modal" id="help_modalPopup">
-                <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-            </div>
+            
 
         </div>
         ';
