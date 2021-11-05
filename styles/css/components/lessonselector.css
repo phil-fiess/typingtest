@@ -49,5 +49,9 @@
 .lesson-selector .buttons-wrapper .button:focus {
   outline: none;
 }
+.lesson-selector select {
+  font-family: "Ruda", sans-serif;
+  padding: 0.5rem;
+}
 
 /*# sourceMappingURL=lessonselector.css.map */

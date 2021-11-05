@@ -261,6 +261,10 @@ body.is-dark-theme .statsbox-label {
 .lesson-selector .buttons-wrapper .button:focus {
   outline: none;
 }
+.lesson-selector select {
+  font-family: "Ruda", sans-serif;
+  padding: 0.5rem;
+}
 
 #user-profile-container {
   font-family: "Ruda", sans-serif;
