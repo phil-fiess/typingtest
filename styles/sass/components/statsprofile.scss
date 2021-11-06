@@ -10,7 +10,7 @@
 
 
 #user-profile-container {
-    max-width: 65%;
+    max-width: 100%;
 
     h2 {
         font-size: 2.5rem;
@@ -33,17 +33,23 @@
         text-transform: uppercase;
         font-weight: bold;
         margin-top: 1rem;
+        margin-bottom: 0;
     }
     
     .label-stats {
         opacity: 0.6;
         text-transform: uppercase;
         font-weight: bold;
-        margin-top: 1rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .value-stats {
-        margin-top: 1rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 2vh;
+        margin-left: 10px;
+        color: colours.$black;
     }
 
     .heading-profile-stats {
@@ -53,8 +59,9 @@
 
     .wrapper-stats {
         display: grid;
-        grid-template-columns: 0.7fr 0.3fr;
-        grid-template-rows: repeat(1fr)
+        grid-template-columns: 1.3fr 0.2fr;
+        grid-template-rows: repeat(1fr);
+        align-items: center;
     }
 
     .button {
@@ -63,7 +70,7 @@
 
 
     #user-profile-basic-info {
-        background-color: rgba(colours.$darkbluegrey, 50%);
+        background-color: rgba(colours.$darkbluegrey, 40%);
         padding: 2rem;
         border-radius: 0.8rem;
     }
@@ -79,6 +86,9 @@
         margin: 3rem 0 3rem 0;
     }
 
+    .output-profile {
+        color: colours.$black;
+    }
 
 }
 

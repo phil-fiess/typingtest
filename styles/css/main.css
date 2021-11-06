@@ -322,7 +322,7 @@ body.is-dark-theme .statsbox-label {
 }
 
 #user-profile-container {
-  max-width: 65%;
+  max-width: 100%;
 }
 #user-profile-container h2 {
   font-size: 2.5rem;
@@ -342,15 +342,21 @@ body.is-dark-theme .statsbox-label {
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 1rem;
+  margin-bottom: 0;
 }
 #user-profile-container .label-stats {
   opacity: 0.6;
   text-transform: uppercase;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 #user-profile-container .value-stats {
-  margin-top: 1rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 2vh;
+  margin-left: 10px;
+  color: #000000;
 }
 #user-profile-container .heading-profile-stats {
   text-transform: uppercase;
@@ -358,8 +364,9 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .wrapper-stats {
   display: grid;
-  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-columns: 1.3fr 0.2fr;
   grid-template-rows: repeat(1fr);
+  align-items: center;
 }
 #user-profile-container .button {
   border-radius: 0.8rem;
@@ -369,7 +376,7 @@ body.is-dark-theme .statsbox-label {
   outline: none;
 }
 #user-profile-container #user-profile-basic-info {
-  background-color: rgba(28, 35, 38, 0.5);
+  background-color: rgba(28, 35, 38, 0.4);
   padding: 2rem;
   border-radius: 0.8rem;
 }
@@ -380,6 +387,9 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .graph-div-wrapper {
   margin: 3rem 0 3rem 0;
+}
+#user-profile-container .output-profile {
+  color: #000000;
 }
 
 @media screen and (max-width: 1024px) {
