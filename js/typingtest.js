@@ -247,16 +247,15 @@ jQuery(document).ready(function($){
         updateQuote();
     });
 
-
-    // $("#pf-lessonSelector__button--darkmode").on("click", toggleDarkMode());
-    // $("#pf-statsProfile__button--darkmode-top").on("click", toggleDarkMode());
-    // $("#pf-statsProfile__button--darkmode-bottom").on("click", toggleDarkMode());
-
     // function toggleDarkMode() {
     //     $("#pf-helpModal__container").toggleClass("pf-darkmode");
     //     $("#pf-typingTest__container").toggleClass("pf-darkmode");
     //     $("#user-profile-container").toggleClass("pf-darkmode");
     // }
+
+    // $("#pf-lessonSelector__button--darkmode").on("click", toggleDarkMode());
+    // $("#pf-statsProfile__button--darkmode-top").on("click", toggleDarkMode());
+    // $("#pf-statsProfile__button--darkmode-bottom").on("click", toggleDarkMode());
 
     $("#pf-lessonSelector__button--darkmode").on("click", function() {
         $("#pf-helpModal__container").toggleClass("pf-darkmode");
