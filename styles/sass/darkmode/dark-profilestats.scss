@@ -6,4 +6,27 @@
     background-color: colours.$verydarkgrey;
     border-radius: 0.8rem;
     padding: 5rem;
+
+    #user-profile-basic-info {
+        background-color: transparentize(darken(colours.$turquoiseblue, 20%), 0.5);
+    }
+
+    .stats-info-section {
+        background-color: transparentize(darken(colours.$turquoiseblue, 10%), 0.3);
+    }
+
+
+    h2, h2, h4, p {
+        color: rgba(colours.$white, 70%);
+
+        p {
+            color: rgba(colours.$white, 50%);
+        }
+    }
+
+    #graphs-section {
+        background-color: lighten(colours.$turquoiseblue, 30%);
+        padding: 3rem;
+        border-radius: 0.8rem;
+    }
 }

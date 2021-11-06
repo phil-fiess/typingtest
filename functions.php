@@ -196,7 +196,7 @@ function typingtest_render_tool_shortcode() {
             </div>
         </div>
 
-        <div class="pf-container container-fluid" id="user-profile-container">
+        <div class="pf-container container-fluid pf-darkmode" id="user-profile-container">
 
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
