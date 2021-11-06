@@ -92,6 +92,7 @@
 .lesson-wrapper .typingtest-statsbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox {
   background-color: rgba(39, 182, 212, 0.8);
@@ -101,12 +102,12 @@
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-label {
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #3c4c52;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-current {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #1c2326;
 }
 .lesson-wrapper .typingtest-statsbar #errors {
@@ -126,6 +127,8 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  font-size: 2vh;
+  line-height: 4vh;
 }
 .lesson-wrapper #lesson-content {
   background-color: rgba(39, 182, 212, 0.5);
