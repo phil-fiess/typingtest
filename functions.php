@@ -119,6 +119,7 @@ function typingtest_render_tool_shortcode() {
 
             <div class="lesson-selector">
                 <div class="selectors-wrapper">
+
                     <div class="selector-label-wrapper">
                         <label class="selector-label competency-selector-label" for="competency-selector">Select A Competency Section</label>
                         <select class="selector" name="competency-selector" id="tool-competency-selector">
@@ -151,10 +152,17 @@ function typingtest_render_tool_shortcode() {
                         </select>
                     </div>
                 </div>
-                <div class="buttons-wrapper">
-                    <button class="button start-button">Start</button>
-                    <button class="button profile-button">User Profile</button>
-                    <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
+                <div class="pf-button__wrapper">
+                    <div class="buttons-wrapper pf-button__wrapper--start" id="">
+                        <button class="button start-button">Start</button>
+                    </div>
+                    <div class="buttons-wrapper pf-button__wrapper--profile" id="">
+                        <button class="button profile-button">User Profile</button>
+                    </div>
+                    <div class="buttons-wrapper pf-button__wrapper--others" id="">
+                        <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
+                        <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
+                    </div>
                 </div>
             </div>
 
@@ -193,6 +201,7 @@ function typingtest_render_tool_shortcode() {
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
                 <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
+                <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
             </div>  
 
             <div class="wrapper">
@@ -246,6 +255,7 @@ function typingtest_render_tool_shortcode() {
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
                 <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
+                <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
             </div>
 
 
