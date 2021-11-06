@@ -2,10 +2,13 @@
 @use '../mixins.scss' as mixins;
 
 
+
 #pf-typingTest__container {
     font-family: 'Ruda', sans-serif;
     display: flex;
     flex-wrap: nowrap;
+    border-radius: 0.8rem;
+    padding: 5rem;
 }
 
 .lesson-wrapper {

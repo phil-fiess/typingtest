@@ -3,6 +3,10 @@
 
 #user-profile-container {
     font-family: 'Ruda', sans-serif;
+    border-radius: 0.8rem;
+    padding: 5rem;
+
+
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Ruda', sans-serif;
     }
@@ -88,6 +92,11 @@
 
     .output-profile {
         color: colours.$black;
+    }
+
+    #graphs-section {
+        padding: 3rem;
+        border-radius: 0.8rem;
     }
 
 }

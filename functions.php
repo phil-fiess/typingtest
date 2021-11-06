@@ -196,12 +196,12 @@ function typingtest_render_tool_shortcode() {
             </div>
         </div>
 
-        <div class="pf-container container-fluid pf-darkmode" id="user-profile-container">
+        <div class="pf-container container-fluid" id="user-profile-container">
 
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
                 <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
-                <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
+                <button class="button" id="pf-statsProfile__button--darkmode-top" data-bs-toggle="" data-bs-target="">Dark Mode</button>
             </div>  
 
             <div class="wrapper">
@@ -255,7 +255,7 @@ function typingtest_render_tool_shortcode() {
             <div class="wrapper-buttons">
                 <button class="button typinglessons-button">Back to Lessons</button>
                 <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
-                <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
+                <button class="button" id="pf-statsProfile__button--darkmode-bottom" data-bs-toggle="" data-bs-target="">Dark Mode</button>
             </div>
 
 

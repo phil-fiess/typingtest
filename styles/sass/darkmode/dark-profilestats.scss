@@ -4,8 +4,6 @@
 
 #user-profile-container.pf-darkmode {
     background-color: colours.$verydarkgrey;
-    border-radius: 0.8rem;
-    padding: 5rem;
 
     #user-profile-basic-info {
         background-color: transparentize(darken(colours.$turquoiseblue, 20%), 0.5);
@@ -26,7 +24,5 @@
 
     #graphs-section {
         background-color: lighten(colours.$turquoiseblue, 30%);
-        padding: 3rem;
-        border-radius: 0.8rem;
     }
 }

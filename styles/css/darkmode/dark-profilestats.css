@@ -1,7 +1,5 @@
 #user-profile-container.pf-darkmode {
   background-color: #212529;
-  border-radius: 0.8rem;
-  padding: 5rem;
 }
 #user-profile-container.pf-darkmode #user-profile-basic-info {
   background-color: rgba(23, 108, 126, 0.5);
@@ -17,8 +15,6 @@
 }
 #user-profile-container.pf-darkmode #graphs-section {
   background-color: #a5e2ef;
-  padding: 3rem;
-  border-radius: 0.8rem;
 }
 
 /*# sourceMappingURL=dark-profilestats.css.map */

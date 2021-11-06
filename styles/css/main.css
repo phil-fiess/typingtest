@@ -82,6 +82,8 @@
   font-family: "Ruda", sans-serif;
   display: flex;
   flex-wrap: nowrap;
+  border-radius: 0.8rem;
+  padding: 5rem;
 }
 
 .lesson-wrapper {
@@ -316,6 +318,8 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container {
   font-family: "Ruda", sans-serif;
+  border-radius: 0.8rem;
+  padding: 5rem;
 }
 #user-profile-container h1, #user-profile-container h2, #user-profile-container h3, #user-profile-container h4, #user-profile-container h5, #user-profile-container h6 {
   font-family: "Ruda", sans-serif;
@@ -390,6 +394,10 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .output-profile {
   color: #000000;
+}
+#user-profile-container #graphs-section {
+  padding: 3rem;
+  border-radius: 0.8rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -470,8 +478,6 @@ body.is-dark-theme .statsbox-label {
 
 #user-profile-container.pf-darkmode {
   background-color: #212529;
-  border-radius: 0.8rem;
-  padding: 5rem;
 }
 #user-profile-container.pf-darkmode #user-profile-basic-info {
   background-color: rgba(23, 108, 126, 0.5);
@@ -487,14 +493,10 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container.pf-darkmode #graphs-section {
   background-color: #a5e2ef;
-  padding: 3rem;
-  border-radius: 0.8rem;
 }
 
 #pf-typingTest__container.pf-darkmode {
   background-color: #212529;
-  border-radius: 0.8rem;
-  padding: 5rem;
 }
 #pf-typingTest__container.pf-darkmode div.lesson-selector label.selector-label {
   color: rgba(255, 255, 255, 0.7);

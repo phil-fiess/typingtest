@@ -1,5 +1,7 @@
 #user-profile-container {
   font-family: "Ruda", sans-serif;
+  border-radius: 0.8rem;
+  padding: 5rem;
 }
 #user-profile-container h1, #user-profile-container h2, #user-profile-container h3, #user-profile-container h4, #user-profile-container h5, #user-profile-container h6 {
   font-family: "Ruda", sans-serif;
@@ -74,6 +76,10 @@
 }
 #user-profile-container .output-profile {
   color: #000000;
+}
+#user-profile-container #graphs-section {
+  padding: 3rem;
+  border-radius: 0.8rem;
 }
 
 @media screen and (max-width: 1024px) {
