@@ -65,4 +65,35 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .lesson-selector {
+    width: 100%;
+  }
+
+  .button {
+    font-size: 1.8vh !important;
+    padding: 1.5rem !important;
+  }
+
+  #pf-typingTest__container {
+    margin: 0 !important;
+  }
+
+  .statsbox-label {
+    font-size: 1rem !important;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  #pf-lessonSelector__button--help {
+    margin-right: 1rem;
+  }
+
+  #pf-lessonSelector__button--darkmode {
+    margin-right: 0;
+  }
+}
+
 /*# sourceMappingURL=lessonselector.css.map */

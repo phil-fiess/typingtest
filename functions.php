@@ -160,8 +160,8 @@ function typingtest_render_tool_shortcode() {
                         <button class="button profile-button">User Profile</button>
                     </div>
                     <div class="buttons-wrapper pf-button__wrapper--others" id="">
-                        <button class="button help-button" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
-                        <button class="button" data-bs-toggle="" data-bs-target="">Dark Mode</button>
+                        <button class="button help-button" id="pf-lessonSelector__button--help" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
+                        <button class="button" id="pf-lessonSelector__button--darkmode" data-bs-toggle="" data-bs-target="">Dark Mode</button>
                     </div>
                 </div>
             </div>
