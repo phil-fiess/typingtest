@@ -37,6 +37,9 @@ jQuery(document).ready(function($){
     let current_quote = "";
     let timer = null;
 
+    let darkmode_btn_lesson = $("#pf-lessonSelector__button--darkmode");
+    let darkmode_btn_stats_top = $("#pf-statsProfile__button--darkmode-top");
+    let darkmode_btn_stats_bottom = $("#pf-statsProfile__button--darkmode-bottom");
 
     //this will have to be re-worked to interact with the DB
     //on user selection of lessons
@@ -200,7 +203,7 @@ jQuery(document).ready(function($){
         quote_text.text("Click the Restart button to begin the exercise again.");
 
         //display restart button by changing Start button
-        start_button.html("Restart")
+        start_button.html("Restart");
 
         //calculate wpm
         wpm = Math.round((((characterTyped / 5) / timeElapsed) * 60));
@@ -249,14 +252,22 @@ jQuery(document).ready(function($){
 
 
     // Dark Theme
-    function toggleDarkMode() {
+    function toggleDarkMode(btn) {
         $("#pf-helpModal__container").toggleClass("pf-darkmode");
         $("#pf-typingTest__container").toggleClass("pf-darkmode");
         $("#user-profile-container").toggleClass("pf-darkmode");
+        btn.text(function(i, txt){
+            return txt === 'Dark Mode' ? 'Light Mode' : 'Dark Mode';
+        });
     }
-    $("#pf-lessonSelector__button--darkmode").on("click", toggleDarkMode);
-    $("#pf-statsProfile__button--darkmode-top").on("click", toggleDarkMode);
-    $("#pf-statsProfile__button--darkmode-bottom").on("click", toggleDarkMode);
-
+    darkmode_btn_lesson.on("click", function(){
+        return toggleDarkMode($(this));
+    });
+    darkmode_btn_stats_top.on("click", function(){
+        return toggleDarkMode($(this));
+    });
+    darkmode_btn_stats_bottom.on("click", function(){
+        return toggleDarkMode($(this));
+    });
 
 });
