@@ -158,7 +158,7 @@ body.is-dark-theme .statsbox-label {
 }
 
 .char-cursor {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   animation: blink 0.5s steps(5, start) infinite;
 }
 
