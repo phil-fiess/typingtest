@@ -77,6 +77,20 @@ jQuery(document).ready(function($){
         });
     }
 
+
+    $('#lesson-input').on('keyup', function() {
+        let textCount = $('#lesson-input').val().length;
+
+        quoteSpanArray = $('.char-input');
+        quoteSpanArray.each(function(index) {
+            if (index == textCount) {
+                $(this).addClass('char-cursor');
+            } else {
+                $(this).removeClass('char-cursor');
+            }
+        });
+    });
+
     //get currently typed text by user
     /**
      * This function will: 
@@ -89,7 +103,7 @@ jQuery(document).ready(function($){
         // get current input text and split it
         curr_input = input_area.val();
         curr_input_array = curr_input.split('');
-       
+
         // increment total characters typed
         characterTyped++;
        
@@ -99,7 +113,6 @@ jQuery(document).ready(function($){
         quoteSpanArray.each(function(index) {
             let typedChar = curr_input_array[index];
 
-        
             // character not currently typed
             if (typedChar == null) {
                 $(this).removeClass('correct-char');
