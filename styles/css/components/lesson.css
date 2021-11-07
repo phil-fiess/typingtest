@@ -79,6 +79,7 @@ body.is-dark-theme .statsbox-label {
 
 .char-cursor {
   background-color: white;
+  animation: blink 0.5s steps(5, start) infinite;
 }
 
 .char-input {
@@ -100,6 +101,16 @@ body.is-dark-theme .statsbox-label {
   display: none;
 }
 
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
 @media screen and (max-width: 768px) {
   .typingtest-container {
     flex-direction: column;

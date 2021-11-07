@@ -265,25 +265,23 @@ jQuery(document).ready(function($){
 
 
     // Dark Theme
-    function toggleDarkMode(btn) {
+    function toggleDarkMode() {
         $("#pf-helpModal__container").toggleClass("pf-darkmode");
         $("#pf-typingTest__container").toggleClass("pf-darkmode");
         $("#user-profile-container").toggleClass("pf-darkmode");
 
         if ($("div[id*='container']").hasClass("pf-darkmode")) {
-            btn.text("Light Mode");
+            $("#pf-lessonSelector__button--darkmode").text("Light Mode");
+            $("#pf-statsProfile__button--darkmode-top").text("Light Mode");
+            $("#pf-statsProfile__button--darkmode-bottom").text("Light Mode");
         } else {
-            btn.text("Dark Mode");
+            $("#pf-lessonSelector__button--darkmode").text("Dark Mode");
+            $("#pf-statsProfile__button--darkmode-top").text("Dark Mode");
+            $("#pf-statsProfile__button--darkmode-bottom").text("Dark Mode");
         }
     }
-    darkmode_btn_lesson.on("click", function(){
-        return toggleDarkMode($(this));
-    });
-    darkmode_btn_stats_top.on("click", function(){
-        return toggleDarkMode($(this));
-    });
-    darkmode_btn_stats_bottom.on("click", function(){
-        return toggleDarkMode($(this));
-    });
+    darkmode_btn_lesson.on("click", toggleDarkMode);
+    darkmode_btn_stats_top.on("click", toggleDarkMode);
+    darkmode_btn_stats_bottom.on("click", toggleDarkMode);
 
 });

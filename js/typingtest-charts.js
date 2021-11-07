@@ -1,10 +1,14 @@
 jQuery(document).ready(function($) {
 
-    function changeTextOnColourModeBtn(btn) {
+    function changeTextOnColourModeBtn() {
         if ($("div[id*='container']").hasClass("pf-darkmode")) {
-            btn.text("Light Mode");
+            $("#pf-lessonSelector__button--darkmode").text("Light Mode");
+            $("#pf-statsProfile__button--darkmode-top").text("Light Mode");
+            $("#pf-statsProfile__button--darkmode-bottom").text("Light Mode");
         } else {
-            btn.text("Dark Mode");
+            $("#pf-lessonSelector__button--darkmode").text("Dark Mode");
+            $("#pf-statsProfile__button--darkmode-top").text("Dark Mode");
+            $("#pf-statsProfile__button--darkmode-bottom").text("Dark Mode");
         }
     }
 
@@ -119,18 +123,14 @@ jQuery(document).ready(function($) {
             });
         });
 
-        changeTextOnColourModeBtn($("#pf-lessonSelector__button--darkmode"));
-        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-top"));
-        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-bottom"));
+        changeTextOnColourModeBtn();
     });
 
     $('.typinglessons-button').on('click', function() {
         $('#user-profile-container').hide();
         $('.typingtest-container').show("slow");
 
-        changeTextOnColourModeBtn($("#pf-lessonSelector__button--darkmode"));
-        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-top"));
-        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-bottom"));
+        changeTextOnColourModeBtn();
     })
 
 
