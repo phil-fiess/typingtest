@@ -20,12 +20,8 @@
     div.lesson-wrapper {
 
         div.lesson-text {
-            background-color: colours.$turquoiseblue;
+            background-color: rgba(colours.$turquoiseblue, 60%);
             color: colours.$white;
-            
-            .char-input {
-                color: rgba(colours.$white, 70%);
-            }
         }
 
         div.statsbox-label {

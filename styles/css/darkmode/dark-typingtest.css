@@ -8,11 +8,8 @@
   color: rgba(255, 255, 255, 0.9) !important;
 }
 #pf-typingTest__container.pf-darkmode div.lesson-wrapper div.lesson-text {
-  background-color: #27b6d4;
+  background-color: rgba(39, 182, 212, 0.6);
   color: #ffffff;
-}
-#pf-typingTest__container.pf-darkmode div.lesson-wrapper div.lesson-text .char-input {
-  color: rgba(255, 255, 255, 0.7);
 }
 #pf-typingTest__container.pf-darkmode div.lesson-wrapper div.statsbox-label {
   color: rgba(255, 255, 255, 0.7);

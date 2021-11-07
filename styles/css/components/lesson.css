@@ -57,7 +57,7 @@
   z-index: 10;
 }
 .lesson-wrapper #lesson-input {
-  background-color: rgba(148, 31, 22, 0);
+  background-color: rgba(116, 22, 16, 0);
   color: transparent;
   resize: none;
   border: none;
@@ -87,7 +87,7 @@ body.is-dark-theme .statsbox-label {
 }
 
 .incorrect-char {
-  color: #941f16;
+  color: #741610;
   font-weight: bold;
 }
 
