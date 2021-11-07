@@ -156,7 +156,7 @@ function typingtest_render_tool_shortcode() {
                     <div class="buttons-wrapper pf-button__wrapper--start" id="">
                         <button class="button start-button">Start</button>
                     </div>
-                    <div class="buttons-wrapper pf-button__wrapper--profile" id="">
+                    <div class="buttons-wrapper pf-button__wrapper--profile" id="pf-lessonSelect__button--userprofile">
                         <button class="button profile-button">User Profile</button>
                     </div>
                     <div class="buttons-wrapper pf-button__wrapper--others" id="">
