@@ -233,7 +233,7 @@ jQuery(document).ready(function($){
             },
             error: function(e) {
                 console.log('error: ' + JSON.stringify(e));
-                alert("error! something went wrong. Contact your web administrator. Error: " + e);
+                alert("Error! Something went wrong. Contact your web administrator. Error: " + e);
             }
         });
     }
@@ -256,9 +256,12 @@ jQuery(document).ready(function($){
         $("#pf-helpModal__container").toggleClass("pf-darkmode");
         $("#pf-typingTest__container").toggleClass("pf-darkmode");
         $("#user-profile-container").toggleClass("pf-darkmode");
-        btn.text(function(i, txt){
-            return txt === 'Dark Mode' ? 'Light Mode' : 'Dark Mode';
-        });
+
+        if ($("div[id*='container']").hasClass("pf-darkmode")) {
+            btn.text("Light Mode");
+        } else {
+            btn.text("Dark Mode");
+        }
     }
     darkmode_btn_lesson.on("click", function(){
         return toggleDarkMode($(this));

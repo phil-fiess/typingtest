@@ -1,9 +1,18 @@
 jQuery(document).ready(function($) {
+
+    function changeTextOnColourModeBtn(btn) {
+        if ($("div[id*='container']").hasClass("pf-darkmode")) {
+            btn.text("Light Mode");
+        } else {
+            btn.text("Dark Mode");
+        }
+    }
+
+
     $('.profile-button').on('click', function() {
         $('.typingtest-container').hide();
         $('#user-profile-container').show("slow", function() {
             //call data to get the results each time so it updates after lessons end
-            console.log('ajax called');
             $.ajax({
                 type: "POST",
                 url: ajax_object.ajax_url,
@@ -109,11 +118,19 @@ jQuery(document).ready(function($) {
                 }
             });
         });
+
+        changeTextOnColourModeBtn($("#pf-lessonSelector__button--darkmode"));
+        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-top"));
+        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-bottom"));
     });
 
     $('.typinglessons-button').on('click', function() {
         $('#user-profile-container').hide();
         $('.typingtest-container').show("slow");
+
+        changeTextOnColourModeBtn($("#pf-lessonSelector__button--darkmode"));
+        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-top"));
+        changeTextOnColourModeBtn($("#pf-statsProfile__button--darkmode-bottom"));
     })
 
 
