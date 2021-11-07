@@ -9,7 +9,7 @@
 
 
 jQuery(document).ready(function($){
-    let TIME_LIMIT = 90;
+    let TIME_LIMIT = 60;
 
     let current_lesson = "";
 
