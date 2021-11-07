@@ -546,4 +546,8 @@ button:hover {
   color: #27b6d4 !important;
 }
 
+.btn, .btn-close {
+  border: none !important;
+}
+
 /*# sourceMappingURL=main.css.map */
