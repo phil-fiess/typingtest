@@ -121,7 +121,7 @@ function typingtest_render_tool_shortcode() {
                 <div class="selectors-wrapper">
 
                     <div class="selector-label-wrapper">
-                        <label class="selector-label competency-selector-label" for="competency-selector">Select A Competency Section</label>
+                        <label class="selector-label competency-selector-label" for="competency-selector">Select Competency</label>
                         <select class="selector" name="competency-selector" id="tool-competency-selector">
                             <option value="financial-reporting">Financial Reporting</option>
                             <option value="management-accounting">Management Accounting</option>
@@ -132,7 +132,7 @@ function typingtest_render_tool_shortcode() {
                         </select>
                     </div>
                     <div class="selector-label-wrapper">
-                        <label class="selector-label level-selector-label" for="level-selector">Select A Difficulty Level</label>
+                        <label class="selector-label level-selector-label" for="level-selector">Select Lesson</label>
                         <select class="selector" name="level-selector" id="tool-difficulty-selector">
                             <option value="1">1</option>
                             <option value="2">2</option>
