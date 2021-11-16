@@ -9,7 +9,7 @@
 
 
 jQuery(document).ready(function($){
-    let TIME_LIMIT = 60;
+    let TIME_LIMIT = 15;
 
     let current_lesson = "";
 
@@ -261,6 +261,7 @@ jQuery(document).ready(function($){
      */
     $('.lesson-selector select').on('change', function(){
         updateQuote();
+        start_button.html("Start");
     });
 
 
