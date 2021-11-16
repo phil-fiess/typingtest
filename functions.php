@@ -189,7 +189,7 @@ function typingtest_render_tool_shortcode() {
                 </div>
                 <div id="lessontext-wrapper">
                     <div class="lesson-text" id="lesson-content" spellcheck="false">
-                        <span>Select a Compentency Section and Difficulty Level, then click the Start button.</span>
+                        <span>Select a Compentency and Lesson, then click the START button to begin.</span>
                     </div>
                     <textarea class="lesson-text" id="lesson-input" spellcheck="false"></textarea>
                 </div>
