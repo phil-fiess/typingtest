@@ -79,7 +79,7 @@ function typingtest_render_tool_shortcode() {
                                     <p class="pf-helpModal__detail"><b>Example:</b> The Financial Reporting section will have related sentences from topics such as revenue recognition, leases, financial instruments, inventories, impairment, provision, contingent liability, etc.</p>
                                     <p class="pf-helpModal__detail"><b>Note:</b> If you are in Core 1, I recommend to choose mostly Financial Reporting; in Core 2, choose Management Accounting; in Elective Modules, choose the competency area that matches your module.</p>
                                 <p class="pf-helpModal__paragraph"><b>Step 2:</b> Select a <mark>Difficulty Level</mark> from the drop-down box.</p>
-                                    <p class="pf-helpModal__detail">Available levels are 1-15, with 1 being the easiest and 15 being the most difficult. The the higher the chosen level, the more complex the sentences will be.</p>
+                                    <p class="pf-helpModal__detail">Available levels are 1-15, with 1 being the easiest and 15 being the most difficult. The higher the chosen level, the more complex the sentences will be.</p>
                                 <p class="pf-helpModal__paragraph"><b>Step 3:</b> Click the <mark>Start</mark> button.</p>
                                     <p class="pf-helpModal__detail">As you\'re typing, the app will measure the following info:</p>
                                     <ul class="pf-helpModal__detail--list">
