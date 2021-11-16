@@ -67,10 +67,10 @@ function typingtest_admin_page() {
 ?>
 
     <div id="typingtest-admin-wrapper">
-        <h1 id="typingtest-admin-header">Gevorg, CPA Typing Test Lesson Admin</h1>
-        <h2 id="typingtest-admin-form-title">Choose a lesson and difficulty to edit</h2>
+        <h1 id="typingtest-admin-header">Gevorg, CPA Typing Test Admin</h1>
+        <h2 id="typingtest-admin-form-title">Choose a competency and lesson to edit:</h2>
         <form method="POST" action="#" id="lessons-form">
-            <label for="competency" class="select-label">Select A Competency Section</label>
+            <label for="competency" class="select-label">Select Competency</label>
             <select name="competency" id="competency-selector">
                 <option value="financial-reporting">Financial Reporting</option>
                 <option value="management-accounting">Management Accounting</option>
@@ -79,7 +79,7 @@ function typingtest_admin_page() {
                 <option value="strategy-and-governance">Strategy and Governance</option>
                 <option value="finance">Finance</option>
             </select>
-            <label for="level" class="select-label">Select A Difficulty Level</label>
+            <label for="level" class="select-label">Select Lesson</label>
             <select name="level" id="difficulty-selector">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -97,7 +97,7 @@ function typingtest_admin_page() {
                 <option value="14">14</option>
                 <option value="15">15</option>
             </select>
-            <label for="lesson-content">Edit Your Lesson Content</label>
+            <label for="lesson-content">Input Lesson Content</label>
             <textarea name="lesson-content" id="typingtest-admin-lesson-content" rows="20" cols="70"></textarea>
             <button type="submit" id="typingtest-admin-submit">Update Lesson</button>
         </form>
