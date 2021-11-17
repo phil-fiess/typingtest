@@ -161,6 +161,12 @@ body.is-dark-theme .statsbox-label {
     // }
 }
 
+
+.tooltip-inner {
+    font-size: 1.3vh;
+    padding: 0.7rem;
+}
+
 @media screen and (min-width: 769px) {
 
     #pf-typingTest__container {

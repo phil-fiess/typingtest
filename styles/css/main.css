@@ -215,6 +215,11 @@ body.is-dark-theme .statsbox-label {
     margin: 1rem 0.5rem 1rem 0.5rem;
   }
 }
+.tooltip-inner {
+  font-size: 1.3vh;
+  padding: 0.7rem;
+}
+
 @media screen and (min-width: 769px) {
   #pf-typingTest__container {
     padding: 5rem;
