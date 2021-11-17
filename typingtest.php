@@ -34,6 +34,8 @@ function typingtest_admin_page() {
         $level = $_POST['level'];
         $lesson_content = $_POST['lesson-content'];
 
+        $lesson_content_parsed = preg_replace("/[^a-zA-Z0-9\s\.\?!]/", "", $lesson_content);
+
         switch($competency) {
             case "financial-reporting":
                 $table_name = $wpdb->prefix . "typingtest_financial_reporting_lessons";
@@ -59,9 +61,9 @@ function typingtest_admin_page() {
         $sql = "SELECT level_$level FROM $table_name";
         $result = $wpdb->get_results($sql, ARRAY_A);
         if (!isset($result) || empty($result)) {
-            $inserted = $wpdb->insert($table_name, array("level_$level" => $lesson_content));
+            $inserted = $wpdb->insert($table_name, array("level_$level" => $lesson_content_parsed));
         } else {
-            $wpdb->update($table_name, array("level_$level" => $lesson_content), array('id' => 1));
+            $wpdb->update($table_name, array("level_$level" => $lesson_content_parsed), array('id' => 1));
         }
     }
 ?>
