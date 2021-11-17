@@ -83,7 +83,6 @@
   display: flex;
   flex-wrap: nowrap;
   border-radius: 0.8rem;
-  padding: 5rem;
 }
 
 .lesson-wrapper {
@@ -94,16 +93,14 @@
 .lesson-wrapper .typingtest-statsbar {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox {
   background-color: rgba(39, 182, 212, 0.8);
   padding: 1rem;
   border-radius: 0.8rem;
   margin: 1rem 0 1rem 0;
-  width: 20%;
-}
-.lesson-wrapper .typingtest-statsbar .statsbox#errors {
-  margin: 1rem 3rem 1rem 3rem;
+  width: 100%;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-label {
   text-transform: uppercase;
@@ -195,6 +192,10 @@ body.is-dark-theme .statsbox-label {
   }
 }
 @media screen and (max-width: 768px) {
+  #pf-typingTest__container {
+    padding: 2rem;
+  }
+
   .typingtest-container {
     flex-direction: column;
     margin-right: 1rem !important;
@@ -211,11 +212,15 @@ body.is-dark-theme .statsbox-label {
     max-width: 100%;
   }
 
-  .statsbox-current {
-    width: 20vw;
+  .statsbox#errors {
+    margin: 1rem 0.5rem 1rem 0.5rem;
   }
 }
 @media screen and (min-width: 769px) {
+  #pf-typingTest__container {
+    padding: 5rem;
+  }
+
   .typingtest-container {
     flex-direction: row;
     margin-right: auto;
@@ -229,8 +234,8 @@ body.is-dark-theme .statsbox-label {
     max-width: 70%;
   }
 
-  .statsbox-current {
-    width: 5vw;
+  .statsbox#errors {
+    margin: 1rem 3rem 1rem 3rem;
   }
 }
 .lesson-selector {
@@ -329,7 +334,6 @@ body.is-dark-theme .statsbox-label {
 #user-profile-container {
   font-family: "Ruda", sans-serif;
   border-radius: 0.8rem;
-  padding: 5rem;
 }
 #user-profile-container h1, #user-profile-container h2, #user-profile-container h3, #user-profile-container h4, #user-profile-container h5, #user-profile-container h6 {
   font-family: "Ruda", sans-serif;
@@ -349,7 +353,6 @@ body.is-dark-theme .statsbox-label {
 }
 #user-profile-container .wrapper {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 2rem;
 }
 #user-profile-container .label-profile {
@@ -385,6 +388,10 @@ body.is-dark-theme .statsbox-label {
 #user-profile-container .button {
   border-radius: 0.8rem;
   font-family: "Ruda", sans-serif;
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 2.3vh;
+  padding: 2.3rem;
+  height: 100%;
 }
 #user-profile-container .button:focus {
   outline: none;
@@ -412,6 +419,10 @@ body.is-dark-theme .statsbox-label {
 }
 
 @media screen and (max-width: 1024px) {
+  #user-profile-container {
+    padding: 2rem;
+  }
+
   .wrapper {
     flex-direction: column;
   }
@@ -427,6 +438,10 @@ body.is-dark-theme .statsbox-label {
   }
 }
 @media screen and (min-width: 1025px) {
+  #user-profile-container {
+    padding: 5rem;
+  }
+
   #today_statsInfoSection {
     margin: 0 1rem 0 1rem;
   }

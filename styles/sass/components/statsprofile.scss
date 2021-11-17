@@ -4,7 +4,6 @@
 #user-profile-container {
     font-family: 'Ruda', sans-serif;
     border-radius: 0.8rem;
-    padding: 5rem;
 
 
     h1, h2, h3, h4, h5, h6 {
@@ -29,7 +28,6 @@
 
     .wrapper {
         display: flex;
-        justify-content: space-between;
         margin-bottom: 2rem;
     }
 
@@ -70,6 +68,10 @@
 
     .button {
         @include mixins.rounded-button();
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 2.3vh;
+        padding: 2.3rem;
+        height: 100%;
     }
 
 
@@ -106,6 +108,9 @@
 
   
 @media screen and (max-width: 1024px) {
+    #user-profile-container {
+        padding: 2rem;
+    }
 
     .wrapper {
         flex-direction: column;
@@ -124,6 +129,10 @@
 
 
 @media screen and (min-width: 1025px) {
+    #user-profile-container {
+        padding: 5rem;
+    }
+
     #today_statsInfoSection {
         margin: 0 1rem 0 1rem;
     }
