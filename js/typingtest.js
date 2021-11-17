@@ -9,6 +9,14 @@
 
 
 jQuery(document).ready(function($){
+
+    // Enable Bootstrap Tooltips Components    
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+
     let TIME_LIMIT = 15;
 
     let current_lesson = "";

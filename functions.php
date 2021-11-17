@@ -9,10 +9,11 @@ function add_scripts_and_styles() {
     wp_enqueue_script('chart.js', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', array(), null, true);
     wp_enqueue_script('typingtest-charts.js', plugins_url('/js/typingtest-charts.js', __FILE__), array('jquery', 'json2'));
     wp_localize_script('typingtest-charts.js', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
+    // wp_enqueue_script('js/scripts.js', plugins_url('/js/scripts.js', __FILE__));
 
-    wp_enqueue_script('bootstrap.min.js', plugins_url('node_modules/bootstrap/dist/js/bootstrap.min.js', __FILE__));
+    wp_enqueue_script('bootstrap.bundle.min.js', plugins_url('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', __FILE__));
     wp_enqueue_style('bootstrap.min.css', plugins_url('node_modules/bootstrap/dist/css/bootstrap.min.css', __FILE__));
-    wp_enqueue_script('popper.min.js', plugins_url('node_modules\@popperjs\core\dist\umd\popper.min.js', __FILE__));
+    wp_enqueue_script('popper.min.js', plugins_url('node_modules/popper.js/dist/popper.min.js', __FILE__));
 
 }
 add_action('init', 'add_scripts_and_styles');
