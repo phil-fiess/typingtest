@@ -41,8 +41,7 @@ jQuery(document).ready(function($){
     let darkmode_btn_stats_top = $("#pf-statsProfile__button--darkmode-top");
     let darkmode_btn_stats_bottom = $("#pf-statsProfile__button--darkmode-bottom");
 
-    //this will have to be re-worked to interact with the DB
-    //on user selection of lessons
+    
     function updateQuote() {
         quote_text.text("");
         
@@ -181,6 +180,7 @@ jQuery(document).ready(function($){
         timerbar_progress.css("width", "100%");
         error_text.text(0);
         timerbar_text.html(TIME_LIMIT + " seconds");
+        $('#current-wpm').text("--");
     }
 
     function updateTimer() {
@@ -252,8 +252,70 @@ jQuery(document).ready(function($){
     }
 
     //This handles the elements in the tool starting the game
-    $('.start-button').on('click', startGame);
+    $('.start-button').on('click', function() {
+        if ($(this).text() == "Start" || $(this).text() == 'Restart') {
+            $(this).text("End");
+            startGame();
+        } else {
+            finishGame();
+        }
+    });
     $('#lesson-input').on('input', processCurrentText);
+
+    $('.random-button').on('click', function() {
+        quote_text.text("");
+        let randomCompetency = Math.floor(Math.random() * 6) + 1;
+        let randomLesson = Math.floor(Math.random() * 3) + 1;
+        let lessonArea;
+        switch(randomCompetency) {
+            case 1:
+                lessonArea = "financial-reporting";
+                break;
+            case 2: 
+                lessonArea = "management-accounting";
+                break;
+            case 3: 
+                lessonArea = "taxation";
+                break;
+            case 4: 
+                lessonArea = "assurance";
+                break;
+            case 5:
+                lessonArea = "strategy-and-governance";
+                break;
+            case 6:
+                lessonArea = "finance";
+                break;
+            default:
+                break;
+        }
+        console.log(lessonArea + " " + randomLesson);
+        $.ajax({
+            type: 'POST',
+            url: ajax_object.ajax_url,
+            data: {
+                action: "typingtest_select_lesson",
+                competency: lessonArea,
+                level: randomLesson
+            },
+            success: function(response) {
+                console.log('res: ' + response);
+                current_lesson = response;
+
+                current_quote = current_lesson;
+                //separate each char and make an element to individually style each one
+                current_quote.split('').forEach(function(char, index) {
+                    const charSpan = document.createElement('span');
+                    charSpan.className = "char-input";
+                    charSpan.innerText = char;
+                    quote_text.append(charSpan);
+                });
+            },
+            error: function(error) {
+                alert(error);
+            }
+        });
+    });
 
 
     /**
