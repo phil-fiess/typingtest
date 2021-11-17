@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
     //element selectors for game display
     let timer_text = $('.current-time');
     let timerbar_progress = $('#pf-timerBar__progress');
-    let timerbar_text = $('#pf-timerBar__text').html(TIME_LIMIT + " seconds");
+    let timerbar_text = $('#pf-timerBar__text').html(0 + " seconds");
     let accuracy_text = $('#current-accuracy');
     let error_text = $('#current-errors');
     let wpm_text = $('#current-wpm');
@@ -134,17 +134,17 @@ jQuery(document).ready(function($){
             else {
                 $(this).addClass('incorrect-char');
                 $(this).removeClass('correct-char');
-                errors++; // increment number of errors
+                // errors++; // increment number of errors
             }
         });
        
-        // display the number of errors
-        error_text.text(total_errors + errors);
+        // // display the number of errors
+        // error_text.text(total_errors + errors);
        
-        // update accuracy text
-        let correctCharacters = (characterTyped - (total_errors + errors));
-        accuracy = ((correctCharacters / characterTyped) * 100);
-        accuracy_text.text(Math.round(accuracy));
+        // // update accuracy text
+        // let correctCharacters = (characterTyped - (total_errors + errors));
+        // accuracy = ((correctCharacters / characterTyped) * 100);
+        // accuracy_text.text(Math.round(accuracy));
        
         // if current text is completely typed, finish the game. 
         if (curr_input.length == current_quote.length) {
@@ -168,7 +168,7 @@ jQuery(document).ready(function($){
         updateQuote();
         clearInterval(timer);
         timer = setInterval(updateTimer, 1000);
-        timerbar_text.html(TIME_LIMIT + " seconds");
+        timerbar_text.html(0 + " seconds");
     }
 
     function resetValues() {
@@ -192,7 +192,7 @@ jQuery(document).ready(function($){
     }
 
     function updateTimer() {
-        if (timeLeft > 0) {
+        if (true) {
             timeLeft--;
             timeElapsed++;
             timer_text.text(timeElapsed+ "s");
@@ -213,6 +213,36 @@ jQuery(document).ready(function($){
         // let time_spent = TIME_LIMIT - timeLeft;
         let time_spent = timeElapsed;
         console.log('time spent: ' + time_spent);
+
+                
+        //calculate errors
+        errors = 0;
+        let typedWords = input_area.val().split(' ');
+        let wordCount = typedWords.length;
+        let correctWordCount = 0;
+        let hasError = false;
+        quoteSpanArray = $('.char-input');
+        console.log('what is this?' + JSON.stringify(quoteSpanArray));
+        quoteSpanArray.each(function() {
+            console.log('is this even iterating?');
+            console.log($(this).text());
+            if ($(this).text() == " ") {
+                if (hasError) {
+                    console.log('error counted');
+                    errors++;
+                    hasError = false;
+                } else {
+                    console.log('correct word counted');
+                    correctWordCount++;
+                }
+            } else if ($(this).hasClass('incorrect-char')){
+                console.log('incorrect word found');
+                hasError = true;
+            }
+        });
+        let accuracy = (correctWordCount / wordCount) * 100;
+        error_text.html(errors);
+        accuracy_text.html(Math.round(accuracy));
 
         clearInterval(timer);
         // timerbar_progress.css("width", "100%");
