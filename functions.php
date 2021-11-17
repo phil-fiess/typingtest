@@ -86,8 +86,8 @@ function typingtest_render_tool_shortcode() {
                                     <ul class="pf-helpModal__detail--list">
                                         <li><b>Typing Speed:</b> measured as words-per-minute (WPM)</li>
                                         <li><b>Time:</b> how many seconds spent until the exercise was completed</li>
-                                        <li><b>Errors:</b> the number of words mistyped</li>
-                                        <li><b>Accuracy:</b> the percentage of words typed accurately in comparison to the total words in the exercise</li>
+                                        <li><b>Errors:</b> the number of letterss mistyped</li>
+                                        <li><b>Accuracy:</b> the percentage of letters typed accurately in comparison to the total letters in the exercise</li>
                                     </ul>
                                 <p class="pf-helpModal__paragraph"><b>Step 4:</b> Once the exercise is complete, your exercise stats will display in the three boxes.</p>
                                 <p class="pf-helpModal__paragraph"><b>Step 5:</b> To re-do the lesson, click the <mark>Restart</mark> button; to select a new lesson, choose a competency section and difficulty level then click the <mark>Start</mark> button.</p>
@@ -172,15 +172,15 @@ function typingtest_render_tool_shortcode() {
 
             <div class="lesson-wrapper">
                 <div class="typingtest-statsbar">
-                    <div class="statsbox" id="wpm">
+                    <div class="statsbox" id="wpm" data-bs-toggle="tooltip" data-bs-placement="top" title="Typing speed measured in words-per-minute (WPM)">
                         <div class="statsbox-label">WPM</div>
                         <div class="statsbox-current" id="current-wpm">--</div>
                     </div>
-                    <div class="statsbox" id="errors">
+                    <div class="statsbox" id="errors" data-bs-toggle="tooltip" data-bs-placement="top" title="The number of letters mistyped">
                         <div class="statsbox-label">Errors</div>
                         <div class="statsbox-current" id="current-errors">--</div>
                     </div>
-                    <div class="statsbox" id="accuracy">
+                    <div class="statsbox" id="accuracy" data-bs-toggle="tooltip" data-bs-placement="top" title="The percentage of letters typed accurately in comparison to the total letters in the exercise">
                         <div class="statsbox-label">Accuracy</div>
                         <div class="statsbox-current" id="current-accuracy">--</div>
                     </div>
