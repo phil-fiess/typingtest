@@ -154,18 +154,18 @@ function typingtest_render_tool_shortcode() {
                     </div>
                 </div>
                 <div class="pf-button__wrapper">
-                    <div class="buttons-wrapper pf-button__wrapper--start" id="">
+                    <div class="buttons-wrapper pf-button__wrapper--one" id="">
                         <button class="button start-button">Start</button>
                     </div>
-                    <div class="buttons-wrapper pf-button__wrapper--profile" id="pf-lessonSelect__button--userprofile">
+                    <div class="buttons-wrapper pf-button__wrapper--one id="">
+                        <button class="button random-button">Random Lesson</button>
+                    </div>
+                    <div class="buttons-wrapper pf-button__wrapper--one" id="pf-lessonSelect__button--userprofile">
                         <button class="button profile-button">User Profile</button>
                     </div>
-                    <div class="buttons-wrapper pf-button__wrapper--others" id="">
+                    <div class="buttons-wrapper pf-button__wrapper--two" id="">
                         <button class="button help-button" id="pf-lessonSelector__button--help" data-bs-toggle="modal" data-bs-target="#pf-helpModal__wrapper">Help</button>
                         <button class="button" id="pf-lessonSelector__button--darkmode" data-bs-toggle="" data-bs-target="">Dark Mode</button>
-                    </div>
-                    <div class="buttons-wrapper pf-button__wrapper--others id="">
-                        <button class="button random-button">Random Lesson</button>
                     </div>
                 </div>
             </div>

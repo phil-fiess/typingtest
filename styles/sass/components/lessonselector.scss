@@ -82,17 +82,11 @@
         flex-direction: column;
         margin-top: 1.5rem;
 
-        &--start {
+        &--one {
             display: inline-flex;
             flex-direction: column;
         }
-
-        &--profile {
-            display: inline-flex;
-            flex-direction: column;
-        }
-
-        &--others {
+        &--two {
             display: inline-flex;
             flex-direction: row;
             justify-content: space-between;

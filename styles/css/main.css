@@ -283,15 +283,11 @@ body.is-dark-theme .statsbox-label {
   flex-direction: column;
   margin-top: 1.5rem;
 }
-.lesson-selector .pf-button__wrapper--start {
+.lesson-selector .pf-button__wrapper--one {
   display: inline-flex;
   flex-direction: column;
 }
-.lesson-selector .pf-button__wrapper--profile {
-  display: inline-flex;
-  flex-direction: column;
-}
-.lesson-selector .pf-button__wrapper--others {
+.lesson-selector .pf-button__wrapper--two {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
