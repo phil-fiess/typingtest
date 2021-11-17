@@ -19,13 +19,16 @@
     .typingtest-statsbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
   
         .statsbox {
             background-color: rgba(colours.$turquoiseblue, 80%);
             padding: 1rem;
             border-radius: 0.8rem;
             margin: 1rem 0 1rem 0;
+            width: 20%;
+        }
+        .statsbox#errors {
+            margin: 1rem 3rem 1rem 3rem;
         }
     
         .statsbox-label {
@@ -61,12 +64,12 @@
         top: 0;
         left: 0;
         overflow: hidden;
-        font-size: 2vh;
+        font-size: 2.5vh;
         line-height: 4vh;
     }
   
     #lesson-content {
-        background-color: rgba(colours.$turquoiseblue, 50%);
+        background-color: colours.$turquoiseblue;
         z-index: 10;
     }
   
@@ -96,12 +99,12 @@ body.is-dark-theme .statsbox-label {
 
 
 .char-cursor {
-    background-color: rgba(colours.$white, 70%);
-    animation: blink 0.5s steps(5, start) infinite;
+    background-color: lighten(colours.$turquoiseblue, 15%);
+    animation: blink 0.6s steps(5, start) infinite;
 }
    
 .char-input {
-    color: darken(colours.$turquoiseblue, 5%);
+    color: rgba(colours.$white, 80%);
     font-weight: bold;
 }
     
@@ -122,13 +125,13 @@ body.is-dark-theme .statsbox-label {
 
 @keyframes blink {
     to {
-        visibility: hidden;
+        background-color: rgba(lighten(colours.$turquoiseblue, 15%), 0.0);
     }
 }
   
 @-webkit-keyframes blink {
     to {
-      visibility: hidden;
+        background-color: rgba(lighten(colours.$turquoiseblue, 15%), 0.0);
     }
 }
 
@@ -168,7 +171,7 @@ body.is-dark-theme .statsbox-label {
 
     .lesson-wrapper {
         margin: 0 0 0 4rem;
-        max-width: 50%;
+        max-width: 70%;
     }
 
     .statsbox-current {

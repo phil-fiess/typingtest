@@ -14,13 +14,16 @@
 .lesson-wrapper .typingtest-statsbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox {
   background-color: rgba(39, 182, 212, 0.8);
   padding: 1rem;
   border-radius: 0.8rem;
   margin: 1rem 0 1rem 0;
+  width: 20%;
+}
+.lesson-wrapper .typingtest-statsbar .statsbox#errors {
+  margin: 1rem 3rem 1rem 3rem;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-label {
   text-transform: uppercase;
@@ -49,11 +52,11 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  font-size: 2vh;
+  font-size: 2.5vh;
   line-height: 4vh;
 }
 .lesson-wrapper #lesson-content {
-  background-color: rgba(39, 182, 212, 0.5);
+  background-color: #27b6d4;
   z-index: 10;
 }
 .lesson-wrapper #lesson-input {
@@ -78,12 +81,12 @@ body.is-dark-theme .statsbox-label {
 }
 
 .char-cursor {
-  background-color: rgba(255, 255, 255, 0.7);
-  animation: blink 0.5s steps(5, start) infinite;
+  background-color: #65cde3;
+  animation: blink 0.6s steps(5, start) infinite;
 }
 
 .char-input {
-  color: #23a4be;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
 }
 
@@ -103,12 +106,12 @@ body.is-dark-theme .statsbox-label {
 
 @keyframes blink {
   to {
-    visibility: hidden;
+    background-color: rgba(101, 205, 227, 0);
   }
 }
 @-webkit-keyframes blink {
   to {
-    visibility: hidden;
+    background-color: rgba(101, 205, 227, 0);
   }
 }
 @media screen and (max-width: 768px) {
@@ -143,7 +146,7 @@ body.is-dark-theme .statsbox-label {
 
   .lesson-wrapper {
     margin: 0 0 0 4rem;
-    max-width: 50%;
+    max-width: 70%;
   }
 
   .statsbox-current {
