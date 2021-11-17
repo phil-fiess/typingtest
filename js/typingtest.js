@@ -164,7 +164,7 @@ jQuery(document).ready(function($){
     }
 
     function resetValues() {
-        timeLeft = TIME_LIMIT;
+        // timeLeft = TIME_LIMIT;
         timeElapsed = 0;
         errors = 0;
         total_errors = 0;
@@ -176,10 +176,10 @@ jQuery(document).ready(function($){
         input_area.val("");
         // quote_text.text('Click on the area below to start the game.');
         accuracy_text.text(100);
-        timer_text.text(timeLeft + 's');
+        timer_text.text(timeElapsed + 's');
         timerbar_progress.css("width", "100%");
         error_text.text(0);
-        timerbar_text.html(TIME_LIMIT + " seconds");
+        timerbar_text.html(timeElapsed + " seconds");
         $('#current-wpm').text("--");
     }
 
@@ -187,11 +187,11 @@ jQuery(document).ready(function($){
         if (timeLeft > 0) {
             timeLeft--;
             timeElapsed++;
-            timer_text.text(timeLeft + "s");
+            timer_text.text(timeElapsed+ "s");
 
-            timeProgressWidth = (timeLeft / TIME_LIMIT) * 100;
-            timerbar_progress.css("width", timeProgressWidth + "%");
-            timerbar_text.html(timeLeft + " seconds");
+            timeProgressWidth = (timeElapsed / TIME_LIMIT) * 100;
+            // timerbar_progress.css("width", timeProgressWidth + "%");
+            timerbar_text.html(timeElapsed + " seconds");
         } else {
             finishGame();
         }
@@ -202,7 +202,8 @@ jQuery(document).ready(function($){
      */
     function finishGame() {
         //stop timer
-        let time_spent = TIME_LIMIT - timeLeft;
+        // let time_spent = TIME_LIMIT - timeLeft;
+        let time_spent = timeElapsed;
         console.log('time spent: ' + time_spent);
 
         clearInterval(timer);
@@ -290,6 +291,8 @@ jQuery(document).ready(function($){
                 break;
         }
         console.log(lessonArea + " " + randomLesson);
+        $('select[name="competency-selector"]').val(lessonArea);
+        $('select[name="level-selector"]').val(randomLesson);
         $.ajax({
             type: 'POST',
             url: ajax_object.ajax_url,
@@ -301,7 +304,6 @@ jQuery(document).ready(function($){
             success: function(response) {
                 console.log('res: ' + response);
                 current_lesson = response;
-
                 current_quote = current_lesson;
                 //separate each char and make an element to individually style each one
                 current_quote.split('').forEach(function(char, index) {
