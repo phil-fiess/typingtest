@@ -20,7 +20,6 @@
   padding: 1rem;
   border-radius: 0.8rem;
   margin: 1rem 0 1rem 0;
-  width: 100%;
 }
 .lesson-wrapper .typingtest-statsbar .statsbox-label {
   text-transform: uppercase;
@@ -31,10 +30,6 @@
 .lesson-wrapper .typingtest-statsbar .statsbox-current {
   font-size: 3rem;
   color: #1c2326;
-}
-.lesson-wrapper .typingtest-statsbar #errors {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 .lesson-wrapper #lessontext-wrapper {
   position: relative;
@@ -132,6 +127,10 @@ body.is-dark-theme .statsbox-label {
     max-width: 100%;
   }
 
+  .statsbox {
+    width: 100%;
+  }
+
   .statsbox#errors {
     margin: 1rem 0.5rem 1rem 0.5rem;
   }
@@ -152,6 +151,10 @@ body.is-dark-theme .statsbox-label {
   .lesson-wrapper {
     margin: 0 0 0 4rem;
     max-width: 70%;
+  }
+
+  .statsbox {
+    width: 20%;
   }
 
   .statsbox#errors {
