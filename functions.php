@@ -12,6 +12,7 @@ function add_scripts_and_styles() {
 
     wp_enqueue_script('bootstrap.min.js', plugins_url('node_modules/bootstrap/dist/js/bootstrap.min.js', __FILE__));
     wp_enqueue_style('bootstrap.min.css', plugins_url('node_modules/bootstrap/dist/css/bootstrap.min.css', __FILE__));
+    wp_enqueue_script('popper.min.js', plugins_url('node_modules\@popperjs\core\dist\umd\popper.min.js', __FILE__));
 
 }
 add_action('init', 'add_scripts_and_styles');
