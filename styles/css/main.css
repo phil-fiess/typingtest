@@ -538,15 +538,6 @@ body.is-dark-theme .statsbox-label {
   outline: none;
 }
 
-button {
-  height: 100% !important;
-  border: 3px solid #27b6d4 !important;
-}
-button:hover {
-  background-color: transparent;
-  color: #27b6d4 !important;
-}
-
 .btn, .btn-close {
   border: none !important;
 }

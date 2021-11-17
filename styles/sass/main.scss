@@ -24,17 +24,6 @@
     @include mixins.rounded-button();
 }
 
-
-button {
-    height: 100% !important;
-    border: 3px solid colours.$turquoiseblue !important;
-
-    &:hover {
-        background-color: transparent;
-        color: colours.$turquoiseblue !important;
-    }
-}
-
 .btn, .btn-close {
     border: none !important;
 }
