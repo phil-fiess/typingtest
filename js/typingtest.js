@@ -304,7 +304,7 @@ jQuery(document).ready(function($){
     $('.random-button').on('click', function() {
         quote_text.text("");
         let randomCompetency = Math.floor(Math.random() * 6) + 1;
-        let randomLesson = Math.floor(Math.random() * 3) + 1;
+        let randomLesson = Math.floor(Math.random() * 15) + 1;
         let lessonArea;
         switch(randomCompetency) {
             case 1:
