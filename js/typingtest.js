@@ -222,25 +222,26 @@ jQuery(document).ready(function($){
         let correctWordCount = 0;
         let hasError = false;
         quoteSpanArray = $('.char-input');
-        console.log('what is this?' + JSON.stringify(quoteSpanArray));
-        quoteSpanArray.each(function() {
-            console.log('is this even iterating?');
-            console.log($(this).text());
-            if ($(this).text() == " ") {
+        let typedArea = input_area.val().length;
+        quoteSpanArray.each(function(index) {
+            if ($(this).text() != " " && index >= typedArea) {
+                hasError = true;
+            }
+            if ($(this).text() == " " || index == quoteSpanArray.length - 1) {
                 if (hasError) {
-                    console.log('error counted');
+                    // console.log('error counted');
                     errors++;
                     hasError = false;
                 } else {
-                    console.log('correct word counted');
+                    // console.log('correct word counted');
                     correctWordCount++;
                 }
             } else if ($(this).hasClass('incorrect-char')){
-                console.log('incorrect word found');
+                // console.log('incorrect word found');
                 hasError = true;
-            }
+            }length
         });
-        let accuracy = (correctWordCount / wordCount) * 100;
+        accuracy = (correctWordCount / wordCount) * 100;
         error_text.html(errors);
         accuracy_text.html(Math.round(accuracy));
 
@@ -304,7 +305,7 @@ jQuery(document).ready(function($){
     $('.random-button').on('click', function() {
         quote_text.text("");
         let randomCompetency = Math.floor(Math.random() * 6) + 1;
-        let randomLesson = Math.floor(Math.random() * 3) + 1;
+        let randomLesson = Math.floor(Math.random() * 15) + 1;
         let lessonArea;
         switch(randomCompetency) {
             case 1:
