@@ -241,7 +241,10 @@ jQuery(document).ready(function($){
                 hasError = true;
             }length
         });
-        accuracy = (correctWordCount / wordCount) * 100;
+        console.log('what is the word count here? ' + wordCount);
+        console.log('what are said words? ' + typedWords);
+        console.log('what are the correct words, then? ' + correctWordCount);
+        accuracy = (correctWordCount / (correctWordCount + errors)) * 100;
         error_text.html(errors);
         accuracy_text.html(Math.round(accuracy));
 
