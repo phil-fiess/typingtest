@@ -34,7 +34,8 @@ function typingtest_admin_page() {
         $level = $_POST['level'];
         $lesson_content = $_POST['lesson-content'];
 
-        $lesson_content_parsed = preg_replace("/[^a-zA-Z0-9\s\.\?!]/", "", $lesson_content);
+        $pattern = '/[^\w\s$%()[\]\-\*\/\:;<>=+@^#&.,!?\'"]/';
+        $lesson_content_parsed = preg_replace($pattern, "", $lesson_content);
 
         switch($competency) {
             case "financial-reporting":

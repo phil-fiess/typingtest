@@ -306,7 +306,7 @@ function typingtest_select_lesson() {
         }
         $sql = "SELECT level_$level FROM $table_name";
         $result = $wpdb->get_results($sql, ARRAY_A);
-        if (isset($result[0]["level_$level"])) {
+        if (isset($result[0]["level_$level"]) && !empty($result[0]["level_$level"])) {
             echo $result[0]["level_$level"];
         } else {
             echo "No lesson here. Select another!";
@@ -331,7 +331,7 @@ function typingtest_store_test_results() {
     $errors = $results['errors'];
     $time_spent = $results['time_spent'];
 
-    $table = 'wp_typingtest_scores';
+    $table = $wpdb->prefix . 'typingtest_scores';
     $data = array(
         'user_id' => $id,
         'user_firstname' => $fname,

@@ -77,6 +77,18 @@ jQuery(document).ready(function($){
                     charSpan.innerText = char;
                     quote_text.append(charSpan);
                 });
+                quoteSpanArray = $('.char-input');
+                let breakCount = 0;
+                quoteSpanArray.each(function() {
+                    if ($(this).children().length > 0) {
+                        if(breakCount == 1){
+                            $(this).remove();
+                            breakCount = 0;
+                        } else {
+                            breakCount++;
+                        }
+                    }
+                });
             },
             error: function(error) {
                 alert(error);
@@ -117,8 +129,14 @@ jQuery(document).ready(function($){
         errors = 0;
        
         quoteSpanArray = $('.char-input');
+        //count number of line breaks and subtract it from the quote input to match the lengths
+        let lineBreakCount = 0;
+
         quoteSpanArray.each(function(index) {
             let typedChar = curr_input_array[index];
+            if ($(this).children().length > 0) {
+                lineBreakCount++;
+            }
 
             // character not currently typed
             if (typedChar == null) {
@@ -147,7 +165,7 @@ jQuery(document).ready(function($){
         // accuracy_text.text(Math.round(accuracy));
        
         // if current text is completely typed, finish the game. 
-        if (curr_input.length == current_quote.length) {
+        if (curr_input.length == (current_quote.length - lineBreakCount)) {
           finishGame();
           // clear the input area
         //   input_area.val("");
@@ -224,10 +242,15 @@ jQuery(document).ready(function($){
         quoteSpanArray = $('.char-input');
         let typedArea = input_area.val().length;
         quoteSpanArray.each(function(index) {
-            if ($(this).text() != " " && index >= typedArea) {
-                hasError = true;
+            if (index == typedArea) {
+                if (hasError){
+                    errors++;
+                } else {
+                    correctWordCount++;
+                }
+                return false;
             }
-            if ($(this).text() == " " || index == quoteSpanArray.length - 1) {
+            if ($(this).text() == " " || index == quoteSpanArray.length - 1 || $(this).children().length > 0) {
                 if (hasError) {
                     // console.log('error counted');
                     errors++;
@@ -244,7 +267,12 @@ jQuery(document).ready(function($){
         console.log('what is the word count here? ' + wordCount);
         console.log('what are said words? ' + typedWords);
         console.log('what are the correct words, then? ' + correctWordCount);
+        console.log('errors? ' + errors);
         accuracy = (correctWordCount / (correctWordCount + errors)) * 100;
+        if (isNaN(accuracy)){
+            accuracy = 0;
+            errors = "N/A";
+        }
         error_text.html(errors);
         accuracy_text.html(Math.round(accuracy));
 
@@ -306,6 +334,8 @@ jQuery(document).ready(function($){
     $('#lesson-input').on('input', processCurrentText);
 
     $('.random-button').on('click', function() {
+        let button = $(this);
+        button.prop('disabled', true);
         quote_text.text("");
         let randomCompetency = Math.floor(Math.random() * 6) + 1;
         let randomLesson = Math.floor(Math.random() * 15) + 1;
@@ -354,9 +384,25 @@ jQuery(document).ready(function($){
                     charSpan.innerText = char;
                     quote_text.append(charSpan);
                 });
+                quoteSpanArray = $('.char-input');
+                let breakCount = 0;
+                quoteSpanArray.each(function() {
+                    if ($(this).children().length > 0) {
+                        if ($(this).children().length > 0) {
+                            if(breakCount == 1){
+                                $(this).remove();
+                                breakCount = 0;
+                            } else {
+                                breakCount++;
+                            }
+                        }
+                    }
+                });
+                button.prop('disabled', false);
             },
             error: function(error) {
                 alert(error);
+                button.prop('disabled', false);
             }
         });
     });
