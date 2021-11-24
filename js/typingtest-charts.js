@@ -35,12 +35,12 @@ jQuery(document).ready(function($) {
                                     label: "Average Speed (WPM)",
                                     backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "##166af2"],
                                     data: [
-                                        profileData.user_data.competencies.financial_reporting,
-                                        profileData.user_data.competencies.management_accounting,
-                                        profileData.user_data.competencies.taxation, 
-                                        profileData.user_data.competencies.assurance,
-                                        profileData.user_data.competencies.strategy_and_governance,
-                                        profileData.user_data.competencies.finance
+                                        Math.floor(profileData.user_data.competencies.financial_reporting),
+                                        Math.floor(profileData.user_data.competencies.management_accounting),
+                                        Math.floor(profileData.user_data.competencies.taxation), 
+                                        Math.floor(profileData.user_data.competencies.assurance),
+                                        Math.floor(profileData.user_data.competencies.strategy_and_governance),
+                                        Math.floor(profileData.user_data.competencies.finance)
                                     ]
                                 }
                             ]
@@ -66,12 +66,12 @@ jQuery(document).ready(function($) {
                                     pointBorderColor: "#fff",
                                     pointBackgroundColor: "rgba(179,181,198,1)",
                                     data: [
-                                        profileData.user_data.competencies.financial_reporting,
-                                        profileData.user_data.competencies.management_accounting,
-                                        profileData.user_data.competencies.taxation, 
-                                        profileData.user_data.competencies.assurance,
-                                        profileData.user_data.competencies.strategy_and_governance,
-                                        profileData.user_data.competencies.finance
+                                        Math.floor(profileData.user_data.competencies.financial_reporting),
+                                        Math.floor(profileData.user_data.competencies.management_accounting),
+                                        Math.floor(profileData.user_data.competencies.taxation), 
+                                        Math.floor(profileData.user_data.competencies.assurance),
+                                        Math.floor(profileData.user_data.competencies.strategy_and_governance),
+                                        Math.floor(profileData.user_data.competencies.finance)
                                     ]
                                 },
                                 {
@@ -82,12 +82,12 @@ jQuery(document).ready(function($) {
                                     pointBorderColor: "#fff",
                                     pointBackgroundColor: "rgba(255,99,132,1)",
                                     data: [
-                                        profileData.class_data.competencies.financial_reporting,
-                                        profileData.class_data.competencies.management_accounting,
-                                        profileData.class_data.competencies.taxation, 
-                                        profileData.class_data.competencies.assurance,
-                                        profileData.class_data.competencies.strategy_and_governance,
-                                        profileData.class_data.competencies.finance
+                                        Math.floor(profileData.class_data.competencies.financial_reporting),
+                                        Math.floor(profileData.class_data.competencies.management_accounting),
+                                        Math.floor(profileData.class_data.competencies.taxation), 
+                                        Math.floor(profileData.class_data.competencies.assurance),
+                                        Math.floor(profileData.class_data.competencies.strategy_and_governance),
+                                        Math.floor(profileData.class_data.competencies.finance)
                                     ]
                                 }
                             ]
