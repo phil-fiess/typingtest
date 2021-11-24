@@ -219,8 +219,6 @@ function typingtest_render_tool_shortcode() {
                         <p class="output-profile" id="user-name"></h3>
                         <h4 class="label-profile" id="label-user-email">Email </h4>
                         <p class="output-profile" id="user-email"></h4>
-                        <h4 class="label-profile" id="label-user-subscription">Subscription </h4>
-                        <p class="output-profile" id="subscription-info"></h4>
                     </div>
                 </div>
                 <div class="stats-info-section today-stats-info-section" id="today_statsInfoSection">
@@ -228,11 +226,11 @@ function typingtest_render_tool_shortcode() {
                     <div class="wrapper-stats">
                         <h4 class="label-stats stats-header">Total Lessons </h4>
                         <p class="value-stats total-lessons"></p>
-                        <h4 class="label-stats stats-header">Total Time </h4>
+                        <h4 class="label-stats stats-header">Total Time (Min) </h4>
                         <p class="value-stats total-time"></p>
-                        <h4 class="label-stats stats-header">Top Speed </h4>
+                        <h4 class="label-stats stats-header">Top Speed (WPM) </h4>
                         <p class="value-stats top-speed"></p>
-                        <h4 class="label-stats stats-header">Average Speed </h4>
+                        <h4 class="label-stats stats-header">Average Speed (WPM)</h4>
                         <p class="value-stats average-speed"></p>
                     </div>
                 </div>
@@ -241,11 +239,11 @@ function typingtest_render_tool_shortcode() {
                     <div class="wrapper-stats">
                         <h4 class="label-stats stats-header">Total Lessons </h4>
                         <p class="value-stats total-lessons"></p>
-                        <h4 class="label-stats stats-header">Total Time </h4>
+                        <h4 class="label-stats stats-header">Total Time (Min) </h4>
                         <p class="value-stats total-time"></p>
-                        <h4 class="label-stats stats-header">Top Speed </h4>
+                        <h4 class="label-stats stats-header">Top Speed (WPM) </h4>
                         <p class="value-stats top-speed"></p>
-                        <h4 class="label-stats stats-header">Average Speed </h4>
+                        <h4 class="label-stats stats-header">Average Speed (WPM)</h4>
                         <p class="value-stats average-speed"></p>
                     </div>
                 </div>

@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
                             labels: ["Financial Reporting", "Management Accounting", "Taxation", "Assurance", "Strategy and Governance", "Finance"],
                             datasets: [
                                 {
-                                    label: "Your Speeds",
+                                    label: "Your Speed",
                                     fill: true,
                                     backgroundColor: "rgba(179,181,198,0.2)",
                                     borderColor: "rgba(179,181,198,1)",
@@ -95,24 +95,28 @@ jQuery(document).ready(function($) {
                         options: {
                             title: {
                                 display: true, 
-                                text: "Relative Typing Speeds By Competency Area"
+                                text: "Relative Average Typing Speeds By Competency Area (WPM)"
                             }
                         }
                     });
+                    //parse time into MM:SS format
+                    let totalMinutes = Math.floor(profileData.user_data.alltime.total_time / 60);
+                    let totalSeconds = profileData.user_data.alltime.total_time % 60;
+                    let todayMinutes = Math.floor(profileData.user_data.today.total_time / 60);
+                    let todaySeconds = profileData.user_data.today.total_time % 60;
 
                     //populate the top fields with the data
                     $('#user-name').text(profileData.user_data.profile.first_name + " " + profileData.user_data.profile.last_name);
                     $('#user-email').text(profileData.user_data.profile.email);
-                    $('#subscription-info').text('--');
                     $('#total-time-alltime').text("Total time (all time)" + profileData.user_data.alltime.total_time);
 
                     $('.alltime-stats-info-section .total-lessons').text(profileData.user_data.alltime.total_lessons);
-                    $('.alltime-stats-info-section .total-time').text(profileData.user_data.alltime.total_time);
+                    $('.alltime-stats-info-section .total-time').text(totalMinutes + ":" + totalSeconds);
                     $('.alltime-stats-info-section .top-speed').text(profileData.user_data.alltime.top_speed);
                     $('.alltime-stats-info-section .average-speed').text(Math.round((profileData.user_data.alltime.average_speed + Number.EPSILON) * 100) / 100);
 
                     $('.today-stats-info-section .total-lessons').text(profileData.user_data.today.total_lessons);
-                    $('.today-stats-info-section .total-time').text(profileData.user_data.today.total_time);
+                    $('.today-stats-info-section .total-time').text(todayMinutes + ":" + todaySeconds);
                     $('.today-stats-info-section .top-speed').text(profileData.user_data.today.top_speed);
                     $('.today-stats-info-section .average-speed').text(Math.round((profileData.user_data.today.average_speed + Number.EPSILON) * 100) / 100);
                 },
